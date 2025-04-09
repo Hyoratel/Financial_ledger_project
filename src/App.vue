@@ -21,7 +21,7 @@ const route = useRoute();
 // 라우트의 meta 정보에 따라 레이아웃 변경
 const layout = computed(() => {
   const layoutName = route.meta.layout;
-  if (layoutName === 'auth') return AuthLayout;
+  // if (layoutName === 'auth') return AuthLayout;
   return DefaultLayout;
 });
 </script>
