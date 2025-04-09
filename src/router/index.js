@@ -19,7 +19,8 @@ import TermsAgreementView from '@/views/TermsAgreementView.vue';
 // import DashboardView from '@/views/DashboardView.vue'
 // import SettingsView from '@/views/SettingsView.vue'
 // import TransactionFormView from '@/views/TransactionFormView.vue'
-import Homeview from '@/views/HomeView.vue';
+// import Homeview from '@/views/HomeView.vue';
+import TransactionForm from '@/views/TransactionForm.vue';
 
 const routes = [
   // 이재성 주석처리(top)
@@ -95,6 +96,13 @@ const routes = [
   //   component: TransactionFormView,
   //   meta: { requiresAuth: true },
   // }
+
+  // 임시로 router 등록
+  {
+    path: '/',
+    name: 'InputView',
+    component: TransactionForm,
+  },
 ];
 
 const router = createRouter({
