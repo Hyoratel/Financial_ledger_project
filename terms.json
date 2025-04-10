@@ -1,0 +1,28 @@
+[
+  {
+    "title": "** 뱅크 서비스 이용약관",
+    "required": true,
+    "checked": false,
+    "scroll": true,
+    "contentUrl": "/terms/service.txt"
+  },
+  {
+    "title": "개인정보 수집 및 이용",
+    "required": true,
+    "checked": false,
+    "scroll": true,
+    "contentUrl": "/terms/privacy.txt"
+  },
+  {
+    "title": "만 14세 이상 회원입니다.",
+    "required": true,
+    "checked": false,
+    "scroll": false
+  },
+  {
+    "title": "마케팅 정보 수신 동의",
+    "required": false,
+    "checked": false,
+    "scroll": false
+  }
+]
