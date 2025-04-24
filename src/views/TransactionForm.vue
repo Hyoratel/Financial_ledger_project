@@ -1,5 +1,9 @@
 <template>
-  <form @submit.prevent="handleSubmit" class="transaction-form">
+  <form
+    id="transactionForm"
+    @submit.prevent="handleSubmit"
+    class="transaction-form"
+  >
     <label>
       날짜:
       <input type="date" v-model="form.date" required />
@@ -36,8 +40,6 @@
       메모:
       <input type="text" v-model="form.memo" />
     </label>
-
-    <!-- <button type="submit">{{ isEditMode ? '수정' : '저장' }}</button> -->
   </form>
 </template>
 
@@ -46,7 +48,7 @@ import { ref, computed, watch } from 'vue';
 import { useTransactionStore } from '@/stores/transactionStore';
 import { useAuthStore } from '@/stores/authStore';
 import { useCategoryStore } from '@/stores/categoryStore';
-import SelectCategory from '@/components/SelectCategory.vue'; // ✅ 추가
+import SelectCategory from '@/components/SelectCategory.vue';
 
 const props = defineProps({
   transaction: Object,
@@ -67,7 +69,6 @@ const form = ref({
   memo: '',
 });
 
-// 수정 모드일 때 초기값 설정
 const isEditMode = computed(() => !!props.transaction);
 
 if (isEditMode.value) {
@@ -77,26 +78,23 @@ if (isEditMode.value) {
   };
 }
 
-// 유형 변경될 때 categoryStore 상태 반영
 watch(
   () => form.value.type,
   (newType) => {
     categoryStore.selectedType = newType;
-    form.value.category = ''; // 선택 초기화
+    form.value.category = '';
     if (newType) {
-      categoryStore.fetchCategory(newType); // json-server에서 가져오기
+      categoryStore.fetchCategory(newType);
     }
   },
   { immediate: true }
 );
 
-// 숫자만 입력
 const validateAmount = (e) => {
   const val = e.target.value.replace(/[^0-9]/g, '');
   form.value.amount = val;
 };
 
-// 저장 또는 수정
 const handleSubmit = async () => {
   const payload = {
     ...form.value,

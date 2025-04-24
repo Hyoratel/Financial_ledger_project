@@ -267,8 +267,8 @@
       "id": "id0029",
       "userId": "test",
       "amount": 26714,
-      "type": "expense",
-      "category": "여행",
+      "type": "income",
+      "category": "용돈",
       "date": "2025-04-15",
       "memo": ""
     },
@@ -919,6 +919,51 @@
       "category": "식비",
       "amount": 200000,
       "memo": ""
+    },
+    {
+      "id": "e89c",
+      "date": "2025-04-09",
+      "type": "income",
+      "category": "월급",
+      "amount": 111,
+      "memo": "",
+      "userId": "test"
+    },
+    {
+      "id": "f1f1",
+      "date": "2025-04-29",
+      "type": "income",
+      "category": "월급",
+      "amount": 11,
+      "memo": "",
+      "userId": "test"
+    },
+    {
+      "id": "d94e",
+      "date": "2025-04-08",
+      "type": "income",
+      "category": "월급",
+      "amount": 111,
+      "memo": "",
+      "userId": "test"
+    },
+    {
+      "id": "68b4",
+      "date": "2025-04-30",
+      "type": "income",
+      "category": "월급",
+      "amount": 22222,
+      "memo": "",
+      "userId": "test"
+    },
+    {
+      "id": "3b5b",
+      "date": "2025-04-02",
+      "type": "income",
+      "category": "월급",
+      "amount": 333,
+      "memo": "",
+      "userId": "test"
     }
   ],
   "incomeCategory": [

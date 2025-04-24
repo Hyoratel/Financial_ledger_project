@@ -41,7 +41,7 @@ const props = defineProps({
   month: Number,
   transactions: Array,
 });
-
+defineEmits(['selectDay']);
 const { openForm } = useTransactionModalStore();
 
 function handleDateClick(dateStr) {

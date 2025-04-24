@@ -40,9 +40,9 @@ import AuthLayout from '@/layouts/AuthLayout.vue';
 const modal = useTransactionModalStore();
 const transactionStore = useTransactionStore();
 
-const onAddComplete = () => {
-  transactionStore.fetchTransactions();
-  modal.close();
+const onAddComplete = async () => {
+  await transactionStore.fetchTransactions(); //데이터 새로고침
+  modal.close(); //모달 닫기
 };
 
 // // 현재 라우트 가져오기
