@@ -31,36 +31,17 @@
     <main class="main-content p-6">
       <!-- 각 라우트 페이지가 표시되는 영역 -->
       <RouterView />
-
-      <!-- 거래 추가 모달 (선택된 날짜로 거래 추가 가능) -->
-      <BaseModal v-if="modal.showForm" @close="modal.close">
-        <template #header>거래 추가</template>
-
-        <template #body>
-          <!-- 거래 입력 폼 (날짜 전달 & 완료 시 이벤트 발생) -->
-          <TransactionForm
-            :date="modal.selectedDate"
-            @completed="onAddComplete"
-          />
-        </template>
-
-        <template #footer>
-          <button @click="modal.close">닫기</button>
-        </template>
-      </BaseModal>
     </main>
   </div>
 </template>
 
 <script setup>
-import { useModalStore } from '@/stores/modalStore';
 import { useTransactionStore } from '@/stores/transactionStore';
+import { useTransactionModalStore } from '../stores/TransactionModalStore';
 import { useRoute } from 'vue-router';
-import BaseModal from '@/components/base/baseModal.vue';
-import TransactionForm from '@/views/TransactionForm.vue';
 
 // 🧩 상태 관리 스토어 호출
-const modal = useModalStore(); // 모달 상태 관리
+const modal = useTransactionModalStore(); // 전역 모달 상태 관리
 const transactionStore = useTransactionStore(); // 거래 내역 상태 관리
 const route = useRoute(); // 현재 라우트 정보
 

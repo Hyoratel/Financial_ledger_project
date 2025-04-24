@@ -1,19 +1,49 @@
 <template>
   <component :is="layout">
-  <!-- 실제 화면은 여기에 출력 -->
-  <router-view></router-view>
+    <!-- 실제 화면은 여기에 출력 -->
+    <router-view></router-view>
   </component>
 
   <!-- 전역 모달이 있다면 여기에 -->
-  <!-- <BaseModal v-if="uiStore.showModal" /> -->
+  <BaseModal v-if="modal.showForm" @close="modal.close">
+    <template #header>
+      {{ modal.editingTransaction ? '거래 수정' : '거래 추가' }}
+    </template>
+
+    <template #body>
+      <TransactionForm
+        :transaction="modal.editingTransaction"
+        :date="modal.selectedDate"
+        @completed="onAddComplete"
+      />
+    </template>
+
+    <template #footer>
+      <button form="transactionForm" type="submit">저장</button>
+      <button @click="modal.close">닫기</button>
+    </template>
+  </BaseModal>
 </template>
 
 <script setup>
 import { useRoute } from 'vue-router';
 import { computed } from 'vue';
+import BaseModal from './components/base/baseModal.vue';
+import TransactionForm from './views/TransactionForm.vue';
+
+import { useTransactionModalStore } from './stores/TransactionModalStore';
+import { useTransactionStore } from './stores/transactionStore';
 
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import AuthLayout from '@/layouts/AuthLayout.vue';
+
+const modal = useTransactionModalStore();
+const transactionStore = useTransactionStore();
+
+const onAddComplete = () => {
+  transactionStore.fetchTransactions();
+  modal.close();
+};
 
 // // 현재 라우트 가져오기
 const route = useRoute();

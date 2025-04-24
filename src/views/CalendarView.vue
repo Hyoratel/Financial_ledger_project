@@ -1,45 +1,32 @@
 <template>
-  <div class="calendar">
-    <!-- 📅 요일 헤더 출력 -->
-    <div class="weekday-header">
-      <div v-for="day in weekdays" :key="day" class="weekday">{{ day }}</div>
-    </div>
+  <!-- 요일 헤더 -->
+  <div class="weekday-header">
+    <div class="weekday" v-for="day in weekdays" :key="day">{{ day }}</div>
+  </div>
 
-    <!-- 📆 실제 날짜 셀 출력 -->
-    <!-- 이전 / 다음 달 날짜는 회색 표시 -->
-    <div class="calendar-grid">
-      <div
-        v-for="(day, index) in daysInMonth"
-        :key="index"
-        class="calendar-cell"
-        :class="{ 'outside-month': !day.date }"
-        @click="onClickDay(day)"
-      >
-        <!-- 날짜 숫자 출력 -->
-        <div v-if="day.date" class="date">{{ day.date }}</div>
+  <!-- 날짜 셀 -->
+  <div class="calendar-grid">
+    <div
+      v-for="day in calendarDays"
+      :key="day.date + day.label"
+      class="calendar-cell"
+      :class="{ 'outside-month': !day.isCurrentMonth }"
+      @click="day.isCurrentMonth && handleDateClick(day.date)"
+    >
+      <div class="date">{{ day.label }}</div>
 
-        <!-- 거래 요약 표시 (최대 3개) -->
-        <!-- 수입/지출 구분 색상 클래스 -->
-        <div v-if="day.transactions.length">
-          <div
-            v-for="(tx, i) in day.transactions.slice(0, 3)"
-            :key="tx.id"
-            class="summary"
-            :class="tx.type"
-          >
-            <!-- 이모지와 금액 표시 -->
-            <span>{{ getCategoryEmoji(tx.category) }}</span>
-            <span>{{ tx.amount.toLocaleString() }}</span>
-          </div>
-
-          <!-- 3개 초과일 경우 추가 알림 -->
-          <div v-if="day.transactions.length > 3" class="more-indicator">
-            +{{ day.transactions.length - 3 }}개
-          </div>
+      <div v-if="day.transactions.length && day.isCurrentMonth" class="tx-wrap">
+        <div
+          v-for="(t, idx) in day.transactions.slice(0, 2)"
+          :key="t.id"
+          class="summary"
+        >
+          <span :class="t.type">{{ t.category }}</span>
+          <span :class="t.type">{{ t.amount.toLocaleString() }}원</span>
         </div>
-
-        <!-- 거래가 없는 경우 빈 공간 -->
-        <div v-else class="no-transaction-placeholder"></div>
+        <div v-if="day.transactions.length > 2" class="more-indicator">
+          +{{ day.transactions.length - 2 }}개
+        </div>
       </div>
     </div>
   </div>
@@ -47,164 +34,145 @@
 
 <script setup>
 import { computed } from 'vue';
+import { useTransactionModalStore } from '@/stores/TransactionModalStore';
 
-// 상위 컴포넌트로 날짜 클릭 이벤트 전파
-const emit = defineEmits(['select-day']);
-
-// props 정의: 년/월/거래목록
 const props = defineProps({
   year: Number,
   month: Number,
   transactions: Array,
 });
 
-// 📅 요일 이름 (월요일 시작 기준)
-const weekdays = ['월', '화', '수', '목', '금', '토', '일'];
+const { openForm } = useTransactionModalStore();
 
-// 📌 특정 월의 마지막 날짜 구하기
-const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
+function handleDateClick(dateStr) {
+  openForm(dateStr);
+}
 
-// 📌 특정 월의 시작 요일 구하기 (0=일요일 → 월요일 시작 보정)
-const getStartDay = (year, month) => new Date(year, month, 1).getDay();
+const weekdays = ['일', '월', '화', '수', '목', '금', '토'];
 
-// 📆 달력 날짜 계산 (빈칸 포함해서 7로 나누어 떨어지게 맞춤)
-const daysInMonth = computed(() => {
+const calendarDays = computed(() => {
   const days = [];
-  const total = getDaysInMonth(props.year, props.month);
-  const start = (getStartDay(props.year, props.month) + 6) % 7; // 일→월 보정
 
-  // 앞쪽 빈 셀 삽입 (이전 달)
-  for (let i = 0; i < start; i++) {
-    days.push({ date: '', fullDate: '', transactions: [] });
+  const year = props.year;
+  const month = props.month;
+
+  const firstDay = new Date(year, month, 1);
+  const startWeekDay = firstDay.getDay();
+  const lastDate = new Date(year, month + 1, 0).getDate();
+  const prevMonthLastDate = new Date(year, month, 0).getDate();
+
+  // 이전 달 남은 칸
+  for (let i = startWeekDay - 1; i >= 0; i--) {
+    days.push({
+      date: '',
+      label: prevMonthLastDate - i,
+      transactions: [],
+      isCurrentMonth: false,
+    });
   }
 
-  // 현재 월 날짜 생성 + 해당 날짜 거래 필터링
-  for (let i = 1; i <= total; i++) {
-    const dayStr = String(i).padStart(2, '0');
-    const monthStr = String(props.month + 1).padStart(2, '0');
-    const fullDate = `${props.year}-${monthStr}-${dayStr}`;
-    const txs = props.transactions.filter((tx) => tx.date === fullDate);
-    days.push({ date: i, fullDate, transactions: txs });
+  // 현재 달
+  for (let d = 1; d <= lastDate; d++) {
+    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(
+      d
+    ).padStart(2, '0')}`;
+    const tx = props.transactions.filter((t) => t.date === dateStr);
+    days.push({
+      date: dateStr,
+      label: d,
+      transactions: tx,
+      isCurrentMonth: true,
+    });
   }
 
-  // 마지막 줄 빈 셀 채우기 (다음 달)
-  while (days.length % 7 !== 0) {
-    days.push({ date: '', fullDate: '', transactions: [] });
+  // 다음 달 남은 칸
+  while (days.length < 42) {
+    days.push({
+      date: '',
+      label: days.length - (startWeekDay + lastDate) + 1,
+      transactions: [],
+      isCurrentMonth: false,
+    });
   }
 
   return days;
 });
-
-// 🔤 카테고리별 이모지 매핑
-const getCategoryEmoji = (category) => {
-  const map = {
-    식비: '🍽️',
-    교통비: '🚌',
-    쇼핑: '🛍️',
-    월급: '💰',
-    용돈: '💸',
-  };
-  return map[category] || '💬'; // 매핑 없으면 기본 이모지
-};
-
-// ✅ 날짜 클릭 시 상위 컴포넌트로 fullDate 전달
-const onClickDay = (day) => {
-  if (day.fullDate) emit('select-day', day.fullDate);
-};
 </script>
 
 <style scoped>
-.calendar {
-  width: 100%;
-}
-
-/* 📅 요일 헤더 스타일 */
 .weekday-header {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   text-align: center;
+  background: #f1f1f1;
   font-weight: bold;
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #ddd;
 }
 .weekday {
-  padding: 10px 0;
-  font-size: 0.9rem;
-  color: #555;
+  padding: 6px 0;
+  font-size: 0.8rem;
 }
 
-/* 📆 달력 그리드 */
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  width: 100%;
+  grid-template-rows: repeat(6, 110px); /* 고정 높이 */
 }
 
-/* 📦 날짜 셀 스타일 */
 .calendar-cell {
-  border: 1px solid #ddd;
+  border: 1px solid #e0e0e0;
   padding: 6px;
-  min-height: 120px;
   box-sizing: border-box;
-  background: #fff;
+  font-size: 0.75rem;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-/* ⛅ 셀 hover 효과 */
 .calendar-cell:hover {
-  background-color: #f9f9f9;
+  background-color: #f8f8f8;
 }
 
-/* ⬜ 이전/다음달 영역 스타일 (회색 처리) */
 .calendar-cell.outside-month {
-  background-color: #f0f0f0;
+  background-color: #f2f2f2;
   color: #aaa;
   pointer-events: none;
 }
 
-/* 🔢 날짜 텍스트 */
 .date {
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 0.8em;
   margin-bottom: 4px;
 }
 
-/* 📋 거래 목록 줄 정렬 */
 .tx-wrap {
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 2px;
-  flex-wrap: wrap;
-  word-break: break-word;
+  flex: 1;
+  overflow: hidden;
 }
 
-/* 💰 거래 요약 텍스트 스타일 */
 .summary {
-  font-size: 0.72em;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  word-break: break-word;
-  line-height: 1.2;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* ➕ 거래 초과 표시 */
 .more-indicator {
-  font-size: 0.68em;
-  color: #999;
+  font-size: 0.68rem;
+  color: #888;
   text-align: right;
-  margin-top: 2px;
 }
 
-/* 💙 수입 색상 */
 .income {
   color: #007bff;
 }
 
-/* ❤️ 지출 색상 */
 .expense {
   color: #dc3545;
 }

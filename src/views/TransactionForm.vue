@@ -1,128 +1,137 @@
-<!-- 수정자 전효빈 -->
 <template>
-  <div>
-    <form @submit.prevent="handleSubmit" id="transactionForm">
-      <div>
-        <label>
-          날짜:
-          <input type="date" v-model="form.date" required />
-        </label>
-      </div>
+  <form @submit.prevent="handleSubmit" class="transaction-form">
+    <label>
+      날짜:
+      <input type="date" v-model="form.date" required />
+    </label>
 
-      <div>
-        <label>
-          타입:
-          <select v-model="form.type" required>
-            <option disabled value="">-- 선택하세요 --</option>
-            <option value="income">수입</option>
-            <option value="expense">지출</option>
-          </select>
-        </label>
-      </div>
+    <label>
+      유형:
+      <select v-model="form.type" required>
+        <option disabled value="">-- 선택 --</option>
+        <option value="income">수입</option>
+        <option value="expense">지출</option>
+      </select>
+    </label>
 
-      <div>
-        <label>
-          카테고리:
-          <select v-model="form.category" :disabled="!form.type" required>
-            <option disabled value="">-- 선택하세요 --</option>
-            <option v-for="c in categoryOptions" :key="c.id" :value="c.value">
-              {{ c.value }}
-            </option>
-          </select>
-        </label>
+    <div v-if="form.type" class="category-section">
+      <label>카테고리 선택:</label>
+      <SelectCategory @select="form.category = $event.value" />
+      <div v-if="form.category" class="selected-category">
+        선택됨: {{ form.category }}
       </div>
+    </div>
 
-      <div>
-        <label>
-          금액:
-          <input type="number" v-model.number="form.amount" min="1" required />
-        </label>
-      </div>
+    <label>
+      금액:
+      <input
+        type="text"
+        v-model="form.amount"
+        @input="validateAmount"
+        required
+      />
+    </label>
 
-      <div>
-        <label>
-          메모:
-          <input type="text" v-model="form.memo" />
-        </label>
-      </div>
+    <label>
+      메모:
+      <input type="text" v-model="form.memo" />
+    </label>
 
-      <button type="submit">저장</button>
-    </form>
-  </div>
+    <!-- <button type="submit">{{ isEditMode ? '수정' : '저장' }}</button> -->
+  </form>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, watch } from 'vue';
 import { useTransactionStore } from '@/stores/transactionStore';
-import { useAuthStore } from '../stores/authStore';
-
-const emit = defineEmits(['completed']); // ✅ 부모에게 완료 알림
+import { useAuthStore } from '@/stores/authStore';
+import { useCategoryStore } from '@/stores/categoryStore';
+import SelectCategory from '@/components/SelectCategory.vue'; // ✅ 추가
 
 const props = defineProps({
-  date: String, // 날짜 prop 받기 (모달에서 전달됨)
+  transaction: Object,
+  date: String,
 });
 
-const store = useTransactionStore();
+const emit = defineEmits(['completed']);
 
-// 입력 폼 상태
+const transactionStore = useTransactionStore();
+const categoryStore = useCategoryStore();
+const authStore = useAuthStore();
+
 const form = ref({
-  date: props.date || '', // 초기값으로 selectedDate 세팅
+  date: props.date || '',
   type: '',
   category: '',
-  amount: null,
+  amount: '',
   memo: '',
 });
 
-// 마운트 시 카테고리 정보 불러오기
-onMounted(() => {
-  store.fetchData();
-});
+// 수정 모드일 때 초기값 설정
+const isEditMode = computed(() => !!props.transaction);
 
-// 카테고리 선택 옵션 계산
-const categoryOptions = computed(() => {
-  return form.value.type === 'income'
-    ? store.incomeCategory
-    : form.value.type === 'expense'
-    ? store.expenseCategory
-    : [];
-});
+if (isEditMode.value) {
+  form.value = {
+    ...props.transaction,
+    amount: props.transaction.amount.toString(),
+  };
+}
 
-// ID 생성 함수
-// function generateDateRandomId() {
-//   const datePart = new Date().toISOString().slice(0, 10).replace(/-/g, '');
-//   const randomPart = Math.random().toString(36).substring(2, 8);
-//   return `${datePart}-${randomPart}`;
-// }
+// 유형 변경될 때 categoryStore 상태 반영
+watch(
+  () => form.value.type,
+  (newType) => {
+    categoryStore.selectedType = newType;
+    form.value.category = ''; // 선택 초기화
+    if (newType) {
+      categoryStore.fetchCategory(newType); // json-server에서 가져오기
+    }
+  },
+  { immediate: true }
+);
 
-// 거래 저장 및 완료 이벤트 emit //
-const authStore = useAuthStore();
+// 숫자만 입력
+const validateAmount = (e) => {
+  const val = e.target.value.replace(/[^0-9]/g, '');
+  form.value.amount = val;
+};
 
+// 저장 또는 수정
 const handleSubmit = async () => {
-  const item = {
+  const payload = {
+    ...form.value,
     userId: authStore.user.id,
-    date: form.value.date,
-    type: form.value.type,
-    category: form.value.category,
-    amount: form.value.amount,
-    memo: form.value.memo,
+    amount: parseInt(form.value.amount),
   };
 
-  try {
-    await store.addTransaction(item); // 서버 저장
-    await store.fetchTransactions(); // ✅ 리스트 갱신
-    emit('completed'); // ✅ 부모에게 완료 알림 → 모달 닫기
-  } catch (error) {
-    console.error('거래 저장 실패:', error);
-    alert('저장 중 문제가 발생했습니다.');
+  if (isEditMode.value) {
+    await transactionStore.updateTransaction(payload);
+  } else {
+    await transactionStore.addTransaction(payload);
   }
 
-  // 폼 초기화
-  form.value = {
-    date: props.date || '',
-    type: '',
-    category: '',
-    amount: null,
-    memo: '',
-  };
+  emit('completed');
 };
 </script>
+
+<style scoped>
+.transaction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.category-section {
+  padding: 0.5rem 0;
+}
+.selected-category {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 5px;
+}
+input,
+select {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+</style>

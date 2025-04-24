@@ -9,15 +9,12 @@
 </template>
 
 <script setup>
-// 모달 상태 관리 스토어
-import { useModalStore } from '@/stores/modalStore';
-
-const modal = useModalStore();
+import { useTransactionModalStore } from '../stores/TransactionModalStore';
+const modal = useTransactionModalStore();
 
 //  거래 추가 버튼 클릭 시 동작
 const openTransactionModal = () => {
-  modal.selectedDate = null; // 새로운 거래니까 날짜 지정 없음
-  modal.showForm = true; // 모달 열기
+  modal.openForm(); //공통 모달 열기
 };
 </script>
 

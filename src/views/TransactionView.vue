@@ -11,7 +11,7 @@
       <!-- 콘텐츠 영역 (스크롤 허용) -->
       <div class="px-3 py-2 overflow-y-auto" style="height: 100%">
         <div class="main-view">
-          <!-- 일일 / 월별 보기 모드 토글 -->
+          <!-- 보기 모드 토글 버튼 -->
           <div class="view-toggle">
             <button
               @click="viewMode = 'daily'"
@@ -51,13 +51,15 @@
             <button @click="nextMonth">다음 달 →</button>
           </div>
 
-          <!-- 일일 모드: 거래 리스트 출력 -->
+          <!-- 거래 리스트 -->
           <TransactionList
             v-if="viewMode === 'daily'"
+            :transactions="transactionsForMonth"
             :selectedMonth="selectedMonth"
+            @edit-transaction="onEditTransaction"
           />
 
-          <!-- 월별 모드: 캘린더 출력 -->
+          <!-- 월별 보기: 캘린더 -->
           <CalendarView
             v-if="viewMode === 'monthly'"
             :year="currentYear"
@@ -65,66 +67,6 @@
             :transactions="transactions"
             @select-day="onSelectDay"
           />
-
-          <!-- 거래 내역 모달 -->
-          <BaseModal v-if="modal.selectedDate" @close="modal.close">
-            <!-- 모달 헤더: 선택된 날짜 표시 -->
-            <template #header>{{ modal.selectedDate }} 거래 내역</template>
-
-            <!-- 모달 본문: 거래 리스트 or 입력 폼 -->
-            <template #body>
-              <!-- 거래 항목 리스트 -->
-              <TransactionItem
-                v-for="tx in transactionsForSelectedDate"
-                :key="tx.id"
-                :transaction="tx"
-              />
-
-              <!-- 거래가 없을 때 안내 메시지 -->
-              <div
-                v-if="
-                  transactionsForSelectedDate.length === 0 && !modal.showForm
-                "
-                class="text-center my-3 text-muted"
-              >
-                거래 내역이 없습니다.
-              </div>
-
-              <!-- 거래 추가 폼 -->
-              <TransactionForm
-                v-if="modal.showForm"
-                :date="modal.selectedDate"
-                @completed="onAddComplete"
-              />
-            </template>
-
-            <!-- 모달 하단 버튼 -->
-            <template #footer>
-              <!-- 거래 추가 버튼 (폼 열기) -->
-              <button
-                class="btn btn-outline-primary me-2"
-                @click="modal.showForm = true"
-                :disabled="modal.showForm"
-              >
-                ＋ 거래 추가
-              </button>
-
-              <!-- 저장 버튼 (폼 있을 때만) -->
-              <button
-                v-if="modal.showForm"
-                class="btn btn-primary me-2"
-                form="transactionForm"
-                type="submit"
-              >
-                저장
-              </button>
-
-              <!-- 닫기 버튼 -->
-              <button class="btn btn-secondary" @click="modal.close">
-                닫기
-              </button>
-            </template>
-          </BaseModal>
         </div>
       </div>
     </div>
@@ -132,83 +74,68 @@
 </template>
 
 <script setup>
-// ✅ Composition API로 구성된 setup 스크립트
-
-// 뷰에서 제공하는 반응형 함수 import
+// ✅ Vue API
 import { ref, computed, onMounted } from 'vue';
 
-// 핀니아 스토어 import
+// ✅ Pinia Stores
 import { useTransactionStore } from '@/stores/transactionStore';
-import { useModalStore } from '@/stores/modalStore';
+import { useTransactionModalStore } from '@/stores/TransactionModalStore';
 
-// 컴포넌트 import
+// ✅ Components
 import TransactionList from '@/components/TransactionList.vue';
 import CalendarView from '@/views/CalendarView.vue';
-import TransactionItem from '@/components/TransactionItem.vue';
-import TransactionForm from '@/views/TransactionForm.vue';
-import BaseModal from '@/components/base/baseModal.vue';
 
-// 보기 모드 상태: 일일 / 월별
+// 보기 모드 상태
 const viewMode = ref('daily');
 
-// 현재 연도, 월
+// 현재 연도/월
 const currentYear = ref(new Date().getFullYear());
 const currentMonth = ref(new Date().getMonth());
 
-// 스토어 상태
+// Stores
 const store = useTransactionStore();
-const modal = useModalStore();
+const modal = useTransactionModalStore();
 
-// 마운트 시 거래내역 불러오기
+// 거래 불러오기
 onMounted(() => {
   store.fetchTransactions();
 });
 
-// 선택된 월 (YYYY-MM 형태 문자열)
+// 'YYYY-MM' 포맷
 const selectedMonth = computed(() => {
   const y = currentYear.value;
   const m = (currentMonth.value + 1).toString().padStart(2, '0');
   return `${y}-${m}`;
 });
 
-// 전체 거래내역
+// 필터된 거래
 const transactions = computed(() => store.transactions);
-
-// 선택된 월의 거래내역 필터링
 const transactionsForMonth = computed(() =>
   store.transactions.filter((tx) => tx.date.startsWith(selectedMonth.value))
 );
 
-// 선택된 날짜의 거래 필터링 (모달용)
-const transactionsForSelectedDate = computed(() =>
-  store.transactions.filter((tx) => tx.date === modal.selectedDate)
-);
-
-// 총 수입 계산
+// 총액 계산
 const totalIncome = computed(() =>
   transactionsForMonth.value
     .filter((tx) => tx.type === 'income')
     .reduce((sum, tx) => sum + tx.amount, 0)
 );
 
-// 총 지출 계산
 const totalExpense = computed(() =>
   transactionsForMonth.value
     .filter((tx) => tx.type === 'expense')
     .reduce((sum, tx) => sum + tx.amount, 0)
 );
 
-// 순수입 계산
 const netIncome = computed(() => totalIncome.value - totalExpense.value);
 
-// 순수입에 따른 색상 클래스 반환
 const netIncomeClass = computed(() => {
   if (netIncome.value > 0) return 'text-primary';
   if (netIncome.value < 0) return 'text-danger';
   return '';
 });
 
-// 이전 달로 이동
+// 월 이동
 const prevMonth = () => {
   if (currentMonth.value === 0) {
     currentMonth.value = 11;
@@ -218,7 +145,6 @@ const prevMonth = () => {
   }
 };
 
-// 다음 달로 이동
 const nextMonth = () => {
   if (currentMonth.value === 11) {
     currentMonth.value = 0;
@@ -228,20 +154,18 @@ const nextMonth = () => {
   }
 };
 
-// 캘린더에서 날짜 선택 → 모달 열기
+// 날짜 클릭 → 모달 열기
 const onSelectDay = (date) => {
-  modal.open(date);
+  modal.openForm(date);
 };
 
-// 거래 추가 완료 시 → 거래 다시 불러오기
-const onAddComplete = () => {
-  store.fetchTransactions();
-  modal.showForm = false;
+// 거래 수정 클릭 → 수정 모달 열기
+const onEditTransaction = (tx) => {
+  modal.editTransaction(tx);
 };
 </script>
 
 <style scoped>
-/* 보기 모드 토글 버튼 영역 */
 .view-toggle {
   display: flex;
   justify-content: center;
@@ -259,9 +183,7 @@ const onAddComplete = () => {
   padding: 8px 16px;
   color: #333;
   cursor: pointer;
-  position: relative;
   border-radius: 12px 12px 0 0;
-  transition: all 0.3s;
 }
 .view-toggle button.active {
   background-color: white;
@@ -279,7 +201,6 @@ const onAddComplete = () => {
   border-radius: 4px 4px 0 0;
 }
 
-/* 수입/지출 요약 박스 */
 .summary-box {
   background: #ffc107;
   padding: 12px;
@@ -289,7 +210,6 @@ const onAddComplete = () => {
   text-align: center;
 }
 
-/* 월 변경 네비게이션 영역 */
 .month-navigation {
   display: flex;
   justify-content: center;
@@ -309,19 +229,5 @@ const onAddComplete = () => {
 }
 .month-navigation button:hover {
   background: #eee;
-}
-
-/* 거래 추가 버튼 스타일 */
-.add-button {
-  margin-top: 12px;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 6px;
-  background-color: #5e4b3c;
-  color: white;
-  cursor: pointer;
-}
-.add-button:hover {
-  background-color: #357bd8;
 }
 </style>
