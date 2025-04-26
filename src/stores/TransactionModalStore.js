@@ -1,39 +1,41 @@
-import { defineStore } from 'pinia';
+// TransactionModalStore.js
 import { ref } from 'vue';
+import { defineStore } from 'pinia';
 
 export const useTransactionModalStore = defineStore('transactionModal', () => {
-  const showForm = ref(false);
+  const isOpen = ref(false); // 모달 열림/닫힘
+  const mode = ref('list'); // 'list' or 'form'
   const selectedDate = ref('');
   const editingTransaction = ref(null);
 
-  // 거래 추가 모달 열기
-  const openForm = (date = '') => {
+  const openList = (date = '') => {
     selectedDate.value = date;
+    mode.value = 'list';
+    isOpen.value = true;
     editingTransaction.value = null;
-    showForm.value = true;
   };
 
-  // 거래 수정 모달 열기
-  const editTransaction = (tx) => {
-    console.log('📦 editTransaction called!', tx);
-    editingTransaction.value = { ...tx };
-    selectedDate.value = tx.date;
-    showForm.value = true;
+  const openForm = (date = '', transaction = null) => {
+    selectedDate.value = date;
+    mode.value = 'form';
+    isOpen.value = true;
+    editingTransaction.value = transaction; //수정할 거래 데이터 저장
   };
 
-  // 모달 닫기
   const close = () => {
-    showForm.value = false;
+    isOpen.value = false;
+    mode.value = 'list';
     selectedDate.value = '';
     editingTransaction.value = null;
   };
 
   return {
-    showForm,
+    isOpen,
+    mode,
     selectedDate,
     editingTransaction,
+    openList,
     openForm,
-    editTransaction,
     close,
   };
 });

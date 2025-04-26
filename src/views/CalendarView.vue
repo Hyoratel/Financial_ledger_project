@@ -42,10 +42,10 @@ const props = defineProps({
   transactions: Array,
 });
 defineEmits(['selectDay']);
-const { openForm } = useTransactionModalStore();
+const modal = useTransactionModalStore();
 
 function handleDateClick(dateStr) {
-  openForm(dateStr);
+  modal.openList(dateStr);
 }
 
 const weekdays = ['일', '월', '화', '수', '목', '금', '토'];

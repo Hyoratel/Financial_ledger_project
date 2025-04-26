@@ -5,22 +5,37 @@
   </component>
 
   <!-- 전역 모달이 있다면 여기에 -->
-  <BaseModal v-if="modal.showForm" @close="modal.close">
+  <BaseModal v-if="modal.isOpen" @close="modal.close">
     <template #header>
-      {{ modal.editingTransaction ? '거래 수정' : '거래 추가' }}
+      {{
+        modal.mode === 'form'
+          ? modal.editingTransaction
+            ? '거래 수정'
+            : '거래 추가'
+          : '거래 내역'
+      }}
     </template>
 
     <template #body>
+      <!-- ✨ 여기서 분기 처리! -->
+      <div v-if="modal.mode === 'list'">
+        <div v-if="transactionsForSelectedDate.length > 0">
+          <div v-for="tx in transactionsForSelectedDate" :key="tx.id">
+            {{ tx.category }} -
+            <span :class="tx.type">{{ tx.amount.toLocaleString() }}원</span>
+          </div>
+        </div>
+        <div v-else>거래가 없습니다.</div>
+
+        <button @click="modal.openForm(modal.selectedDate)">+ 거래 추가</button>
+      </div>
+
       <TransactionForm
+        v-else-if="modal.mode === 'form'"
         :transaction="modal.editingTransaction"
         :date="modal.selectedDate"
-        @completed="onAddComplete"
+        @completed="onTransactionCompleted"
       />
-    </template>
-
-    <template #footer>
-      <button form="transactionForm" type="submit">저장</button>
-      <button @click="modal.close">닫기</button>
     </template>
   </BaseModal>
 </template>
@@ -40,10 +55,23 @@ import AuthLayout from '@/layouts/AuthLayout.vue';
 const modal = useTransactionModalStore();
 const transactionStore = useTransactionStore();
 
+const transactionsForSelectedDate = computed(() => {
+  return transactionStore.transactions.filter(
+    (tx) => tx.date === modal.selectedDate
+  );
+});
+
 const onAddComplete = async () => {
   await transactionStore.fetchTransactions(); //데이터 새로고침
+  modal.showForm = false;
+  modal.showList = true;
   modal.close(); //모달 닫기
 };
+
+async function onTransactionCompleted() {
+  await transactionStore.fetchTransactions(); //거래 새로고침
+  modal.close();
+}
 
 // // 현재 라우트 가져오기
 const route = useRoute();
