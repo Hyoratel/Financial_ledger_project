@@ -921,15 +921,6 @@
       "memo": ""
     },
     {
-      "id": "e89c",
-      "date": "2025-04-09",
-      "type": "income",
-      "category": "월급",
-      "amount": 111,
-      "memo": "",
-      "userId": "test"
-    },
-    {
       "id": "f1f1",
       "date": "2025-04-29",
       "type": "income",
@@ -962,6 +953,15 @@
       "type": "income",
       "category": "월급",
       "amount": 333,
+      "memo": "",
+      "userId": "test"
+    },
+    {
+      "id": "574f",
+      "date": "2025-04-03",
+      "type": "expense",
+      "category": "교통비",
+      "amount": 11,
       "memo": "",
       "userId": "test"
     }
