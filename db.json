@@ -119,6 +119,12 @@
       "phone": "01012341234",
       "code": "261041",
       "createdAt": "2025-04-20T02:09:36.146Z"
+    },
+    {
+      "id": "01011112222",
+      "phone": "01011112222",
+      "code": "150223",
+      "createdAt": "2025-04-28T07:10:22.182Z"
     }
   ],
   "budget": [
@@ -1023,11 +1029,11 @@
       "userId": "test"
     },
     {
-      "id": "0e6a",
-      "date": "2025-04-05",
-      "type": "expense",
-      "category": "식비",
-      "amount": 111,
+      "id": "ea72",
+      "date": "2025-04-16",
+      "type": "income",
+      "category": "월급",
+      "amount": 1500000,
       "memo": "",
       "userId": "test"
     }
@@ -1155,6 +1161,22 @@
       "birth": "2025-04-08",
       "telecom": "SKT",
       "phone": "01063061140",
+      "agreements": {
+        "privacy": true,
+        "telecom": true,
+        "bank": true,
+        "authTerms": true
+      }
+    },
+    {
+      "id": "test4",
+      "password": "c717afc0dec61d2ef10180acc36cabd6adb9cb84500980d887519c74a8df210f",
+      "salt": "076187348d80ba5e1ac6dd69e1706c14",
+      "email": "test@naver.com",
+      "name": "전효빈2",
+      "birth": "2025-04-16",
+      "telecom": "KT",
+      "phone": "01011112222",
       "agreements": {
         "privacy": true,
         "telecom": true,
