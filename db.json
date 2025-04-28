@@ -125,6 +125,18 @@
       "phone": "01011112222",
       "code": "150223",
       "createdAt": "2025-04-28T07:10:22.182Z"
+    },
+    {
+      "id": "01011112222",
+      "phone": "01011112222",
+      "code": "532395",
+      "createdAt": "2025-04-28T11:42:40.728Z"
+    },
+    {
+      "id": "01011111111",
+      "phone": "01011111111",
+      "code": "436749",
+      "createdAt": "2025-04-28T11:46:24.086Z"
     }
   ],
   "budget": [
@@ -1020,15 +1032,6 @@
       "memo": ""
     },
     {
-      "id": "68b4",
-      "date": "2025-04-30",
-      "type": "income",
-      "category": "월급",
-      "amount": 22222,
-      "memo": "",
-      "userId": "test"
-    },
-    {
       "id": "ea72",
       "date": "2025-04-16",
       "type": "income",
@@ -1177,6 +1180,38 @@
       "birth": "2025-04-16",
       "telecom": "KT",
       "phone": "01011112222",
+      "agreements": {
+        "privacy": true,
+        "telecom": true,
+        "bank": true,
+        "authTerms": true
+      }
+    },
+    {
+      "id": "test5",
+      "password": "51d9268ca599e3282dd286be19f7cea954bc1621647ab976e1d82c992a28aa7e",
+      "salt": "024b3a18759a522bf20def1010e80d09",
+      "email": "test@naver.com",
+      "name": "전효빈3",
+      "birth": "2025-04-21",
+      "telecom": "SKT",
+      "phone": "01011112222",
+      "agreements": {
+        "privacy": true,
+        "telecom": true,
+        "bank": true,
+        "authTerms": true
+      }
+    },
+    {
+      "id": "test6",
+      "password": "673026f6d29e4fa68f7009bf9e11bdadc479711be97a9ce8e8395b04b49138c4",
+      "salt": "f1769170b76579ffc9aa402ee6e527c0",
+      "email": "test@gmail.com",
+      "name": "test3",
+      "birth": "2025-04-28",
+      "telecom": "LG",
+      "phone": "01011111111",
       "agreements": {
         "privacy": true,
         "telecom": true,
