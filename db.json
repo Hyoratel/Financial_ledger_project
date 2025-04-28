@@ -928,6 +928,15 @@
       "amount": 111,
       "memo": "",
       "userId": "test"
+    },
+    {
+      "id": "072d",
+      "date": "2025-04-03",
+      "type": "income",
+      "category": "월급",
+      "amount": 200000,
+      "memo": "",
+      "userId": "test"
     }
   ],
   "incomeCategory": [

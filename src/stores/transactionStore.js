@@ -22,7 +22,10 @@ export const useTransactionStore = defineStore('transaction', () => {
       const res = await axios.get(
         `http://localhost:3000/budget?userId=${authStore.user.id}`
       );
-      transactions.value = res.data;
+      transactions.value = res.data.sort(
+        (a, b) => new Date(b.date) - new Date(a.date)
+      );
+      // ✅ 날짜 내림차순(최신순) 정렬해서 저장!
     } catch (error) {
       console.error('📛 거래 데이터 불러오기 실패:', error);
     }
