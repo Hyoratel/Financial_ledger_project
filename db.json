@@ -912,15 +912,6 @@
       "memo": ""
     },
     {
-      "id": "d94e",
-      "date": "2025-04-08",
-      "type": "income",
-      "category": "월급",
-      "amount": 111,
-      "memo": "",
-      "userId": "test"
-    },
-    {
       "id": "68b4",
       "date": "2025-04-30",
       "type": "income",

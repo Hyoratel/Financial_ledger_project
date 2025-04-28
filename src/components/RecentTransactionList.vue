@@ -24,6 +24,10 @@
         </span>
       </li>
     </ul>
+    <!-- ✅ '거래내역 더보기' 버튼 추가 -->
+    <div class="more-button">
+      <button @click="goToTransactions">거래내역 더보기</button>
+    </div>
   </div>
 </template>
 
@@ -31,7 +35,12 @@
 // 트랜잭션 스토어 불러오기
 import { computed, onMounted } from 'vue';
 import { useTransactionStore } from '@/stores/transactionStore';
+import { useRouter } from 'vue-router';
+const router = useRouter();
 
+const goToTransactions = () => {
+  router.push('/transactions');
+};
 const store = useTransactionStore();
 
 // 컴포넌트 마운트 시 거래 데이터 불러오기
@@ -99,5 +108,21 @@ const formatDate = (dateStr) => {
 .expense {
   color: #f44336;
   font-weight: bold;
+}
+/* 버튼 스타일 추가 */
+.more-button {
+  text-align: center;
+  margin-top: 12px;
+}
+.more-button button {
+  background: none;
+  border: none;
+  color: #6c757d;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.more-button button:hover {
+  color: #5e4b3c;
 }
 </style>
