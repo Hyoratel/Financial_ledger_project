@@ -1,7 +1,6 @@
 <script setup>
 import MonthlySummary from '@/components/MonthlySummary.vue';
 import RecentTransactionList from '@/components/RecentTransactionList.vue';
-import AddTransactionButton from '@/components/AddTransactionButton.vue';
 </script>
 
 <template>
@@ -14,7 +13,6 @@ import AddTransactionButton from '@/components/AddTransactionButton.vue';
     <div class="w-100 p-3 d-flex flex-column gap-1">
       <MonthlySummary />
       <RecentTransactionList />
-      <AddTransactionButton />
     </div>
   </div>
 </template>
