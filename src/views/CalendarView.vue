@@ -34,17 +34,21 @@
 
 <script setup>
 import { computed } from 'vue';
+import { useTransactionStore } from '@/stores/transactionStore';
 import { useTransactionModalStore } from '@/stores/TransactionModalStore';
+
+const modal = useTransactionModalStore();
+const transactionStore = useTransactionStore(); // ✅ 거래 스토어 직접 가져오기
 
 const props = defineProps({
   year: Number,
   month: Number,
-  transactions: Array,
 });
-defineEmits(['selectDay']);
-const modal = useTransactionModalStore();
 
-function handleDateClick(dateStr) {
+defineEmits(['selectDay']);
+
+async function handleDateClick(dateStr) {
+  await transactionStore.fetchTransactions(); // ✅ 데이터 최신화
   modal.openList(dateStr);
 }
 
@@ -76,7 +80,7 @@ const calendarDays = computed(() => {
     const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(
       d
     ).padStart(2, '0')}`;
-    const tx = props.transactions.filter((t) => t.date === dateStr);
+    const tx = transactionStore.transactions.filter((t) => t.date === dateStr); // ✅ 여기 중요!
     days.push({
       date: dateStr,
       label: d,

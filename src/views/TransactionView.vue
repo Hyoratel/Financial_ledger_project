@@ -64,7 +64,6 @@
             v-if="viewMode === 'monthly'"
             :year="currentYear"
             :month="currentMonth"
-            :transactions="transactions"
             @select-day="onSelectDay"
           />
         </div>

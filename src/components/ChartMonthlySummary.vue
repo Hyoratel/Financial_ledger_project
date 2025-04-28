@@ -1,8 +1,7 @@
 <template>
-  <!-- 월별 요약 차트 카드 -->
   <div class="bg-white p-6 rounded-xl shadow-md">
     <h2 class="text-lg font-bold mb-4">📊 월별 요약</h2>
-    <Chart :data="chartData" :options="chartOptions" />
+    <Chart type="bar" :data="chartData" :options="chartOptions" />
   </div>
 </template>
 
