@@ -921,15 +921,6 @@
       "userId": "test"
     },
     {
-      "id": "58b3",
-      "date": "2025-04-09",
-      "type": "expense",
-      "category": "여행",
-      "amount": 111,
-      "memo": "",
-      "userId": "test"
-    },
-    {
       "id": "0e6a",
       "date": "2025-04-05",
       "type": "expense",
