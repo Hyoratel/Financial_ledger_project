@@ -137,50 +137,79 @@ src/
 - `main` : 최종 배포 버전
 - `feature/{기능명}` : 기능 단위 개발
 - `fix/{버그명}` : 버그 수정 브랜치
-- `release` : 배포 준비용 통합 브랜치
+- `release2` : 배포 준비용 통합 브랜치
+- `Develop` : 기능 개발용 통합 브랜치
 
 ---
 
 ## 📸 화면 예시
 
-시작페이지
-<img src="./screenshots/iPhone 12 Pro-17.png" width="300px">
-로그인 화면
-<img src="./screenshots/iPhone 12 Pro-16.png" width="300px">
-회원가입 약관
-<img src="./screenshots/iPhone 12 Pro-15.png" width="300px">
-회원가입 예외처리
-<img src="./screenshots/iPhone 12 Pro-14.png" width="300px">
-회원가입 정상화면
-<img src="./screenshots/iPhone 12 Pro-13.png" width="300px">
-홈 화면
-<img src="./screenshots/iPhone 12 Pro-12.png" width="300px">
-홈 화면 거래 입력
-<img src="./screenshots/iPhone 12 Pro-11.png" width="300px">
-거래 입력 예외 처리
-<img src="./screenshots/iPhone 12 Pro-10.png" width="300px">
-일일 거래 내역
-<img src="./screenshots/iPhone 12 Pro-9.png" width="300px">
-일일 거래 내역 - 거래수정
-<img src="./screenshots/iPhone 12 Pro-11.png" width="300px">
-거래수정 - 카테고리 예외처리
-<img src="./screenshots/iPhone 12 Pro-8.png" width="300px">
-월별 거래 내역
-<img src="./screenshots/iPhone 12 Pro-7.png" width="300px">
-월별 거래 내역-거래내역 없는 경우
-<img src="./screenshots/iPhone 12 Pro-6.png" width="300px">
-월별 거래 내역-거래내역 있을 경우
-<img src="./screenshots/iPhone 12 Pro-5.png" width="300px">
-월별 거래 내역-삭제 팝업
-<img src="./screenshots/iPhone 12 Pro-4.png" width="300px">
-통계 월별 요약
-<img src="./screenshots/iPhone 12 Pro-3.png" width="300px">
-통계 수입 추이
-<img src="./screenshots/iPhone 12 Pro-2.png" width="300px">
-통계 지출 추이
-<img src="./screenshots/iPhone 12 Pro-1.png" width="300px">
+시작페이지 | 로그인화면
+
+<tr>
+    <td><img src="./screenshots/iPhone 12 Pro-17.png" width="300px"></td>
+    <td><img src="./screenshots/iPhone 12 Pro-16.png" width="300px"></td>
+</tr>
+
+회원가입 약관 | 회원가입 예외처리
+
+<tr>
+    <td><img src="./screenshots/iPhone 12 Pro-15.png" width="300px"></td>
+    <td><img src="./screenshots/iPhone 12 Pro-14.png" width="300px"></td>
+</tr>
+
+회원가입 정상화면 | 홈 화면
+
+<tr>
+    <td><img src="./screenshots/iPhone 12 Pro-13.png" width="300px"></td>
+    <td><img src="./screenshots/iPhone 12 Pro-12.png" width="300px"></td>
+</tr>
+
+홈 화면 거래 입력 | 거래 입력 예외 처리
+
+<tr>
+    <td><img src="./screenshots/iPhone 12 Pro-11.png" width="300px"></td>
+    <td><img src="./screenshots/iPhone 12 Pro-10.png" width="300px"></td>
+</tr>
+
+일일 거래 내역 | 일일 거래 내역 - 거래수정
+
+<tr>
+    <td><img src="./screenshots/iPhone 12 Pro-9.png" width="300px"></td>
+    <td><img src="./screenshots/iPhone 12 Pro-11.png" width="300px"></td>
+</tr>
+
+거래수정 - 카테고리 예외처리 | 월별 거래 내역
+
+<tr>
+    <td><img src="./screenshots/iPhone 12 Pro-8.png" width="300px"></td>
+    <td><img src="./screenshots/iPhone 12 Pro-7.png" width="300px"></td>
+</tr>
+
+월별 거래 내역-거래내역 없는 경우 | 월별 거래 내역-거래내역 있을 경우
+
+<tr>
+    <td><img src="./screenshots/iPhone 12 Pro-6.png" width="300px"></td>
+    <td><img src="./screenshots/iPhone 12 Pro-5.png" width="300px"></td>
+</tr>
+
+월별 거래 내역-삭제 팝업 | 통계 월별 요약
+
+<tr>
+    <td><img src="./screenshots/iPhone 12 Pro-4.png" width="300px"></td>
+    <td><img src="./screenshots/iPhone 12 Pro-3.png" width="300px"></td>
+</tr>
+
+통계 수입 추이 | 통계 지출 추이
+
+<tr>
+    <td><img src="./screenshots/iPhone 12 Pro-2.png" width="300px"></td>
+    <td><img src="./screenshots/iPhone 12 Pro-1.png" width="300px"></td>
+</tr>
+
 프로필 설정
-<img src="./screenshots/iPhone 12 Pro.png" width="300px">
+
+<td><img src="./screenshots/iPhone 12 Pro.png" width="300px"></td>
 
 ---
 
