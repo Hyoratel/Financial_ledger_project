@@ -137,6 +137,12 @@
       "phone": "01011111111",
       "code": "436749",
       "createdAt": "2025-04-28T11:46:24.086Z"
+    },
+    {
+      "id": "01000000000",
+      "phone": "01000000000",
+      "code": "990130",
+      "createdAt": "2025-04-29T00:37:53.094Z"
     }
   ],
   "budget": [
@@ -1160,10 +1166,10 @@
       "password": "46f20c3ca72967cf9be8cd24281fb35bb52e1733869c17b2d867dd45af0aff96",
       "salt": "6fc2b85ddc842969ef3b1790156a0560",
       "email": "test@naver.com",
-      "name": "전효빈",
+      "name": "테스트",
       "birth": "2025-04-08",
       "telecom": "SKT",
-      "phone": "01063061140",
+      "phone": "01000000000",
       "agreements": {
         "privacy": true,
         "telecom": true,
@@ -1212,6 +1218,22 @@
       "birth": "2025-04-28",
       "telecom": "LG",
       "phone": "01011111111",
+      "agreements": {
+        "privacy": true,
+        "telecom": true,
+        "bank": true,
+        "authTerms": true
+      }
+    },
+    {
+      "id": "test7",
+      "password": "4040772d2332e99c324d64e5d79d857e7a0c00ab6369bc79655a777b9d2df8ae",
+      "salt": "45f16edacc43f96c8632baa5bff16945",
+      "email": "test@gmail.com",
+      "name": "테스트",
+      "birth": "2025-04-29",
+      "telecom": "KT",
+      "phone": "01000000000",
       "agreements": {
         "privacy": true,
         "telecom": true,
