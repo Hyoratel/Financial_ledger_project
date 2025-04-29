@@ -200,54 +200,47 @@ src/
 
   <tr>
     <td align="center">일일 거래 내역</td>
-    <td align="center">일일 거래 내역 - 거래수정</td>
+    <td align="center">일일 거래 내역 - 거래수정(예외처리 포함)</td>
   </tr>
   <tr>
     <td><img src="./screenshots/iPhone 12 Pro-9.png" width="300px"></td>
-    <td><img src="./screenshots/iPhone 12 Pro-11.png" width="300px"></td>
-  </tr>
-
-  <tr>
-    <td align="center">거래수정 - 카테고리 예외처리</td>
-    <td align="center">월별 거래 내역</td>
-  </tr>
-  <tr>
     <td><img src="./screenshots/iPhone 12 Pro-8.png" width="300px"></td>
-    <td><img src="./screenshots/iPhone 12 Pro-7.png" width="300px"></td>
   </tr>
 
   <tr>
+    <td align="center">월별 거래 내역</td>
     <td align="center">월별 거래 내역 - 거래내역 없는 경우</td>
-    <td align="center">월별 거래 내역 - 거래내역 있을 경우</td>
   </tr>
   <tr>
+    <td><img src="./screenshots/iPhone 12 Pro-7.png" width="300px"></td>
     <td><img src="./screenshots/iPhone 12 Pro-6.png" width="300px"></td>
-    <td><img src="./screenshots/iPhone 12 Pro-5.png" width="300px"></td>
   </tr>
 
   <tr>
+    <td align="center">월별 거래 내역 - 거래내역 있을 경우</td>
     <td align="center">월별 거래 내역 - 삭제 팝업</td>
-    <td align="center">통계 월별 요약</td>
   </tr>
   <tr>
+    <td><img src="./screenshots/iPhone 12 Pro-5.png" width="300px"></td>
     <td><img src="./screenshots/iPhone 12 Pro-4.png" width="300px"></td>
-    <td><img src="./screenshots/iPhone 12 Pro-3.png" width="300px"></td>
   </tr>
 
   <tr>
+    <td align="center">통계 월별 요약</td>
     <td align="center">통계 수입 추이</td>
-    <td align="center">통계 지출 추이</td>
   </tr>
   <tr>
+    <td><img src="./screenshots/iPhone 12 Pro-3.png" width="300px"></td>
     <td><img src="./screenshots/iPhone 12 Pro-2.png" width="300px"></td>
-    <td><img src="./screenshots/iPhone 12 Pro-1.png" width="300px"></td>
   </tr>
 
   <tr>
-    <td align="center" colspan="2">프로필 설정</td>
+    <td align="center">통계 지출 추이</td>
+    <td align="center">프로필 설정</td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><img src="./screenshots/iPhone 12 Pro.png" width="300px"></td>
+    <td><img src="./screenshots/iPhone 12 Pro-1.png" width="300px"></td>
+    <td><img src="./screenshots/iPhone 12 Pro.png" width="300px"></td>
   </tr>
 </table>
 
