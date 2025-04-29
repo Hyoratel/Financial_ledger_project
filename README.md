@@ -217,7 +217,7 @@ src/
   </tr>
 
   <tr>
-    <td align="center">월별 거래 내역 - 거래내역 있을 경우</td>
+    <td align="center">월별 거래 내역 - 거래내역 있는는 경우</td>
     <td align="center">월별 거래 내역 - 삭제 팝업</td>
   </tr>
   <tr>
