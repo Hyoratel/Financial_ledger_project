@@ -3,16 +3,8 @@
   <form
     id="transactionForm"
     @submit.prevent="handleSubmit"
-    <!--
-    폼
-    제출시
-    새로고침
-    방지하고
-    handleSubmit
-    실행
-    --
+    class="transaction-form"
   >
-    class="transaction-form" >
     <!-- 날짜 입력 -->
     <label>
       날짜:
