@@ -110,6 +110,20 @@
       </div>
     </template>
   </BaseModal>
+  <!-- ✅ 여기 추가: 전역 알림용 모달 -->
+  <BaseModal v-if="globalModal.isOpen" @close="globalModal.close">
+    <template #header>
+      {{ globalModal.title }}
+    </template>
+
+    <template #body>
+      <p>{{ globalModal.message }}</p>
+    </template>
+
+    <template #footer>
+      <button class="modal-button" @click="globalModal.confirm">확인</button>
+    </template>
+  </BaseModal>
 </template>
 
 <script setup>
@@ -126,6 +140,7 @@ import TransactionForm from './views/TransactionForm.vue';
 // 🔹 Pinia 스토어 가져오기
 import { useTransactionModalStore } from '@/stores/TransactionModalStore';
 import { useTransactionStore } from '@/stores/transactionStore';
+import { useGlobalModalStore } from '@/stores/GlobalModalStore';
 
 // 🔹 레이아웃 컴포넌트 가져오기
 import DefaultLayout from '@/layouts/DefaultLayout.vue';
@@ -135,6 +150,7 @@ import AuthLayout from '@/layouts/AuthLayout.vue';
 const modal = useTransactionModalStore();
 const transactionStore = useTransactionStore();
 const route = useRoute();
+const globalModal = useGlobalModalStore();
 
 // 🔹 선택된 날짜의 거래 내역만 필터링
 const transactionsForSelectedDate = computed(() => {

@@ -7,6 +7,8 @@ import { useRouter } from 'vue-router';
 import { useAuthStore } from '../stores/authStore';
 // 비밀번호 암호화를 위한 CryptoJS 라이브러리 import (현재 이 코드에서는 사용되지 않음)
 import CryptoJS from 'crypto-js';
+// 글로벌 모달 추가가
+import { useGlobalModalStore } from '../stores/GlobalModalStore';
 
 // 사용자 입력값을 저장할 반응형 변수 선언
 const username = ref('');
@@ -16,12 +18,17 @@ const password = ref('');
 const router = useRouter();
 // 인증 스토어 사용 (로그인 처리 및 사용자 정보 접근을 위함)
 const authStore = useAuthStore();
-
+// 전역 모달 사용 등록
+const globalModal = useGlobalModalStore();
 // 로그인 함수 정의
 const login = async () => {
   // 입력값이 비어 있으면 경고 표시
+  // 기존  alert 에서 팝업으로 변경
   if (!username.value || !password.value) {
-    alert('아이디와 비밀번호를 입력해주세요.');
+    globalModal.openAlert({
+      title: '입력 오류',
+      message: '아이디와 비밀번호를 입력해주세요.',
+    });
     return;
   }
 
@@ -29,12 +36,18 @@ const login = async () => {
   const success = await authStore.login(username.value, password.value);
 
   if (success) {
-    // 로그인 성공 시 환영 메시지와 함께 홈으로 이동
-    alert(`${authStore.user.name}님, 환영합니다.`);
-    router.push('/home');
+    globalModal.openAlert({
+      title: '로그인 성공',
+      message: `${authStore.user.name}님, 환영합니다.`,
+      onConfirm: () => {
+        router.push('/home');
+      },
+    });
   } else {
-    // 로그인 실패 시 알림
-    alert('아이디 또는 비밀번호가 일치하지 않습니다.');
+    globalModal.openAlert({
+      title: '로그인 실패',
+      message: '아이디 또는 비밀번호가 일치하지 않습니다.',
+    });
   }
 };
 </script>
