@@ -147,886 +147,3829 @@
   ],
   "budget": [
     {
-      "id": "id0001",
-      "userId": "test",
-      "amount": 2428298,
-      "type": "income",
-      "category": "용돈",
-      "date": "2025-01-01",
-      "memo": ""
-    },
-    {
-      "id": "id0002",
-      "userId": "test",
-      "amount": 340284,
-      "type": "expense",
-      "category": "교통비",
-      "date": "2025-01-23",
-      "memo": ""
-    },
-    {
-      "id": "id0003",
-      "userId": "test",
-      "amount": 343451,
-      "type": "expense",
-      "category": "문화",
-      "date": "2025-01-09",
-      "memo": ""
-    },
-    {
-      "id": "id0004",
-      "userId": "test",
-      "amount": 2361665,
-      "type": "income",
-      "category": "용돈",
-      "date": "2025-01-05",
-      "memo": ""
-    },
-    {
-      "id": "id0005",
-      "userId": "test",
-      "amount": 479895,
-      "type": "expense",
-      "category": "식비",
-      "date": "2025-01-10",
-      "memo": ""
-    },
-    {
-      "id": "id0006",
-      "userId": "test",
-      "amount": 191918,
-      "type": "expense",
-      "category": "여행",
-      "date": "2025-01-24",
-      "memo": ""
-    },
-    {
-      "id": "id0007",
-      "userId": "test",
-      "amount": 2473636,
-      "type": "income",
-      "category": "부수입",
-      "date": "2025-01-03",
-      "memo": ""
-    },
-    {
-      "id": "id0008",
-      "userId": "test",
-      "amount": 242800,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-01-22",
-      "memo": ""
-    },
-    {
-      "id": "id0009",
-      "userId": "test",
-      "amount": 381029,
-      "type": "expense",
-      "category": "교통비",
-      "date": "2025-01-15",
-      "memo": ""
-    },
-    {
-      "id": "id0010",
-      "userId": "test",
-      "amount": 2196456,
-      "type": "income",
-      "category": "용돈",
-      "date": "2025-02-04",
-      "memo": ""
-    },
-    {
-      "id": "id0011",
-      "userId": "test",
-      "amount": 390613,
-      "type": "expense",
-      "category": "문화",
-      "date": "2025-02-22",
-      "memo": ""
-    },
-    {
-      "id": "id0012",
-      "userId": "test",
-      "amount": 148955,
-      "type": "expense",
-      "category": "교통비",
-      "date": "2025-02-12",
-      "memo": ""
-    },
-    {
-      "id": "id0013",
-      "userId": "test",
-      "amount": 1314296,
-      "type": "income",
-      "category": "부수입",
-      "date": "2025-02-02",
-      "memo": ""
-    },
-    {
-      "id": "id0014",
-      "userId": "test",
-      "amount": 209323,
-      "type": "expense",
-      "category": "여행",
-      "date": "2025-02-11",
-      "memo": ""
-    },
-    {
-      "id": "id0015",
-      "userId": "test",
-      "amount": 396772,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-02-22",
-      "memo": ""
-    },
-    {
-      "id": "id0016",
-      "userId": "test",
-      "amount": 2233480,
-      "type": "income",
-      "category": "용돈",
-      "date": "2025-02-03",
-      "memo": ""
-    },
-    {
-      "id": "id0017",
-      "userId": "test",
-      "amount": 111095,
-      "type": "expense",
-      "category": "식비",
-      "date": "2025-02-09",
-      "memo": ""
-    },
-    {
-      "id": "id0018",
-      "userId": "test",
-      "amount": 499562,
-      "type": "expense",
-      "category": "여행",
-      "date": "2025-02-23",
-      "memo": ""
-    },
-    {
-      "id": "id0019",
-      "userId": "test",
-      "amount": 1817498,
+      "id": "d1dd9c",
+      "userId": "test1",
+      "amount": 2211779,
       "type": "income",
       "category": "월급",
-      "date": "2025-03-01",
+      "date": "2025-01-06",
       "memo": ""
     },
     {
-      "id": "id0020",
-      "userId": "test",
-      "amount": 146203,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-03-28",
-      "memo": ""
-    },
-    {
-      "id": "id0021",
-      "userId": "test",
-      "amount": 185984,
-      "type": "expense",
-      "category": "식비",
-      "date": "2025-03-08",
-      "memo": ""
-    },
-    {
-      "id": "id0022",
-      "userId": "test",
-      "amount": 1534689,
-      "type": "income",
-      "category": "월급",
-      "date": "2025-03-05",
-      "memo": ""
-    },
-    {
-      "id": "id0023",
-      "userId": "test",
-      "amount": 90047,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-03-19",
-      "memo": ""
-    },
-    {
-      "id": "id0024",
-      "userId": "test",
-      "amount": 156043,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-03-20",
-      "memo": ""
-    },
-    {
-      "id": "id0025",
-      "userId": "test",
-      "amount": 1204779,
-      "type": "income",
-      "category": "부수입",
-      "date": "2025-03-05",
-      "memo": ""
-    },
-    {
-      "id": "id0026",
-      "userId": "test",
-      "amount": 458438,
-      "type": "expense",
-      "category": "문화",
-      "date": "2025-03-08",
-      "memo": ""
-    },
-    {
-      "id": "id0027",
-      "userId": "test",
-      "amount": 213247,
-      "type": "expense",
-      "category": "교통비",
-      "date": "2025-03-25",
-      "memo": ""
-    },
-    {
-      "id": "id0030",
-      "userId": "test",
-      "amount": 446332,
-      "type": "expense",
-      "category": "여행",
-      "date": "2025-04-13",
-      "memo": ""
-    },
-    {
-      "id": "id0033",
-      "userId": "test",
-      "amount": 439950,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-04-09",
-      "memo": ""
-    },
-    {
-      "id": "id0034",
-      "userId": "test",
-      "amount": 705096,
-      "type": "income",
-      "category": "용돈",
-      "date": "2025-04-05",
-      "memo": ""
-    },
-    {
-      "id": "id0035",
-      "userId": "test",
-      "amount": 444444,
-      "type": "expense",
-      "category": "식비",
-      "date": "2025-04-14",
-      "memo": ""
-    },
-    {
-      "id": "id0037",
-      "userId": "test2",
-      "amount": 2636866,
-      "type": "income",
-      "category": "월급",
-      "date": "2025-01-02",
-      "memo": ""
-    },
-    {
-      "id": "id0038",
-      "userId": "test2",
-      "amount": 342984,
+      "id": "63f57d",
+      "userId": "test1",
+      "amount": 209191,
       "type": "expense",
       "category": "식비",
       "date": "2025-01-06",
       "memo": ""
     },
     {
-      "id": "id0039",
-      "userId": "test2",
-      "amount": 207455,
-      "type": "expense",
-      "category": "교통비",
-      "date": "2025-01-24",
-      "memo": ""
-    },
-    {
-      "id": "id0040",
-      "userId": "test2",
-      "amount": 1027808,
+      "id": "6697ee",
+      "userId": "test1",
+      "amount": 2305668,
       "type": "income",
       "category": "용돈",
-      "date": "2025-01-04",
+      "date": "2025-01-08",
       "memo": ""
     },
     {
-      "id": "id0041",
-      "userId": "test2",
-      "amount": 156567,
-      "type": "expense",
-      "category": "문화",
-      "date": "2025-01-10",
-      "memo": ""
-    },
-    {
-      "id": "id0042",
-      "userId": "test2",
-      "amount": 394697,
-      "type": "expense",
-      "category": "여행",
-      "date": "2025-01-18",
-      "memo": ""
-    },
-    {
-      "id": "id0043",
-      "userId": "test2",
-      "amount": 2389641,
-      "type": "income",
-      "category": "월급",
-      "date": "2025-01-02",
-      "memo": ""
-    },
-    {
-      "id": "id0044",
-      "userId": "test2",
-      "amount": 216058,
+      "id": "ec4966",
+      "userId": "test1",
+      "amount": 148685,
       "type": "expense",
       "category": "식비",
-      "date": "2025-01-25",
+      "date": "2025-01-08",
       "memo": ""
     },
     {
-      "id": "id0045",
-      "userId": "test2",
-      "amount": 199315,
+      "id": "339884",
+      "userId": "test1",
+      "amount": 392589,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-01-08",
+      "memo": ""
+    },
+    {
+      "id": "265bb3",
+      "userId": "test1",
+      "amount": 291137,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-01-08",
+      "memo": ""
+    },
+    {
+      "id": "4e8aaf",
+      "userId": "test1",
+      "amount": 2387688,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-01-15",
+      "memo": ""
+    },
+    {
+      "id": "7048a1",
+      "userId": "test1",
+      "amount": 163709,
       "type": "expense",
       "category": "문화",
       "date": "2025-01-15",
       "memo": ""
     },
     {
-      "id": "id0046",
-      "userId": "test2",
-      "amount": 615361,
-      "type": "income",
-      "category": "월급",
-      "date": "2025-02-04",
+      "id": "9304e9",
+      "userId": "test1",
+      "amount": 474231,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-01-15",
       "memo": ""
     },
     {
-      "id": "id0047",
-      "userId": "test2",
-      "amount": 258704,
+      "id": "1dc9d8",
+      "userId": "test1",
+      "amount": 312698,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-01-15",
+      "memo": ""
+    },
+    {
+      "id": "efe934",
+      "userId": "test1",
+      "amount": 3755188,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-01-27",
+      "memo": ""
+    },
+    {
+      "id": "227365",
+      "userId": "test1",
+      "amount": 356692,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-01-27",
+      "memo": ""
+    },
+    {
+      "id": "26a6e2",
+      "userId": "test1",
+      "amount": 2013781,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-01-31",
+      "memo": ""
+    },
+    {
+      "id": "68a04b",
+      "userId": "test1",
+      "amount": 464286,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-01-31",
+      "memo": ""
+    },
+    {
+      "id": "70c016",
+      "userId": "test1",
+      "amount": 2394364,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-02-06",
+      "memo": ""
+    },
+    {
+      "id": "c1abea",
+      "userId": "test1",
+      "amount": 343281,
       "type": "expense",
       "category": "쇼핑",
       "date": "2025-02-06",
       "memo": ""
     },
     {
-      "id": "id0048",
-      "userId": "test2",
-      "amount": 479869,
-      "type": "expense",
-      "category": "문화",
-      "date": "2025-02-20",
-      "memo": ""
-    },
-    {
-      "id": "id0049",
-      "userId": "test2",
-      "amount": 1492206,
-      "type": "income",
-      "category": "부수입",
-      "date": "2025-02-03",
-      "memo": ""
-    },
-    {
-      "id": "id0050",
-      "userId": "test2",
-      "amount": 109186,
+      "id": "bfd335",
+      "userId": "test1",
+      "amount": 95277,
       "type": "expense",
       "category": "쇼핑",
-      "date": "2025-02-16",
-      "memo": ""
-    },
-    {
-      "id": "id0051",
-      "userId": "test2",
-      "amount": 92716,
-      "type": "expense",
-      "category": "문화",
       "date": "2025-02-06",
       "memo": ""
     },
     {
-      "id": "id0052",
-      "userId": "test2",
-      "amount": 2325969,
-      "type": "income",
-      "category": "용돈",
-      "date": "2025-02-04",
-      "memo": ""
-    },
-    {
-      "id": "id0053",
-      "userId": "test2",
-      "amount": 301762,
-      "type": "expense",
-      "category": "문화",
-      "date": "2025-02-16",
-      "memo": ""
-    },
-    {
-      "id": "id0054",
-      "userId": "test2",
-      "amount": 46738,
-      "type": "expense",
-      "category": "교통비",
-      "date": "2025-02-27",
-      "memo": ""
-    },
-    {
-      "id": "id0055",
-      "userId": "test2",
-      "amount": 908675,
-      "type": "income",
-      "category": "용돈",
-      "date": "2025-03-02",
-      "memo": ""
-    },
-    {
-      "id": "id0056",
-      "userId": "test2",
-      "amount": 181093,
-      "type": "expense",
-      "category": "문화",
-      "date": "2025-03-08",
-      "memo": ""
-    },
-    {
-      "id": "id0057",
-      "userId": "test2",
-      "amount": 237541,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-03-28",
-      "memo": ""
-    },
-    {
-      "id": "id0058",
-      "userId": "test2",
-      "amount": 719511,
-      "type": "income",
-      "category": "용돈",
-      "date": "2025-03-05",
-      "memo": ""
-    },
-    {
-      "id": "id0059",
-      "userId": "test2",
-      "amount": 197621,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-03-27",
-      "memo": ""
-    },
-    {
-      "id": "id0060",
-      "userId": "test2",
-      "amount": 162572,
-      "type": "expense",
-      "category": "식비",
-      "date": "2025-03-12",
-      "memo": ""
-    },
-    {
-      "id": "id0061",
-      "userId": "test2",
-      "amount": 1714889,
+      "id": "3d8ecb",
+      "userId": "test1",
+      "amount": 2290113,
       "type": "income",
       "category": "월급",
-      "date": "2025-03-01",
-      "memo": ""
-    },
-    {
-      "id": "id0062",
-      "userId": "test2",
-      "amount": 429358,
-      "type": "expense",
-      "category": "식비",
-      "date": "2025-03-14",
-      "memo": ""
-    },
-    {
-      "id": "id0063",
-      "userId": "test2",
-      "amount": 431838,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-03-06",
-      "memo": ""
-    },
-    {
-      "id": "id0064",
-      "userId": "test2",
-      "amount": 1775958,
-      "type": "income",
-      "category": "부수입",
-      "date": "2025-04-01",
-      "memo": ""
-    },
-    {
-      "id": "id0065",
-      "userId": "test2",
-      "amount": 339226,
-      "type": "expense",
-      "category": "식비",
-      "date": "2025-04-25",
-      "memo": ""
-    },
-    {
-      "id": "id0066",
-      "userId": "test2",
-      "amount": 53625,
-      "type": "expense",
-      "category": "문화",
-      "date": "2025-04-07",
-      "memo": ""
-    },
-    {
-      "id": "id0067",
-      "userId": "test2",
-      "amount": 1569737,
-      "type": "income",
-      "category": "월급",
-      "date": "2025-04-04",
-      "memo": ""
-    },
-    {
-      "id": "id0068",
-      "userId": "test2",
-      "amount": 25489,
-      "type": "expense",
-      "category": "여행",
-      "date": "2025-04-07",
-      "memo": ""
-    },
-    {
-      "id": "id0069",
-      "userId": "test2",
-      "amount": 349858,
-      "type": "expense",
-      "category": "문화",
-      "date": "2025-04-07",
-      "memo": ""
-    },
-    {
-      "id": "id0070",
-      "userId": "test2",
-      "amount": 1160791,
-      "type": "income",
-      "category": "월급",
-      "date": "2025-04-05",
-      "memo": ""
-    },
-    {
-      "id": "id0071",
-      "userId": "test2",
-      "amount": 39319,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-04-07",
-      "memo": ""
-    },
-    {
-      "id": "id0072",
-      "userId": "test2",
-      "amount": 94123,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-04-26",
-      "memo": ""
-    },
-    {
-      "id": "id0073",
-      "userId": "test3",
-      "amount": 2149489,
-      "type": "income",
-      "category": "부수입",
-      "date": "2025-01-05",
-      "memo": ""
-    },
-    {
-      "id": "id0074",
-      "userId": "test3",
-      "amount": 250692,
-      "type": "expense",
-      "category": "여행",
-      "date": "2025-01-22",
-      "memo": ""
-    },
-    {
-      "id": "id0075",
-      "userId": "test3",
-      "amount": 427381,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-01-07",
-      "memo": ""
-    },
-    {
-      "id": "id0076",
-      "userId": "test3",
-      "amount": 729065,
-      "type": "income",
-      "category": "용돈",
-      "date": "2025-01-04",
-      "memo": ""
-    },
-    {
-      "id": "id0077",
-      "userId": "test3",
-      "amount": 124303,
-      "type": "expense",
-      "category": "문화",
-      "date": "2025-01-25",
-      "memo": ""
-    },
-    {
-      "id": "id0078",
-      "userId": "test3",
-      "amount": 59985,
-      "type": "expense",
-      "category": "식비",
-      "date": "2025-01-19",
-      "memo": ""
-    },
-    {
-      "id": "id0079",
-      "userId": "test3",
-      "amount": 2482188,
-      "type": "income",
-      "category": "월급",
-      "date": "2025-01-05",
-      "memo": ""
-    },
-    {
-      "id": "id0080",
-      "userId": "test3",
-      "amount": 338736,
-      "type": "expense",
-      "category": "교통비",
-      "date": "2025-01-08",
-      "memo": ""
-    },
-    {
-      "id": "id0081",
-      "userId": "test3",
-      "amount": 242976,
-      "type": "expense",
-      "category": "문화",
-      "date": "2025-01-11",
-      "memo": ""
-    },
-    {
-      "id": "id0082",
-      "userId": "test3",
-      "amount": 1065975,
-      "type": "income",
-      "category": "부수입",
-      "date": "2025-02-01",
-      "memo": ""
-    },
-    {
-      "id": "id0083",
-      "userId": "test3",
-      "amount": 496046,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-02-18",
-      "memo": ""
-    },
-    {
-      "id": "id0084",
-      "userId": "test3",
-      "amount": 95873,
-      "type": "expense",
-      "category": "문화",
       "date": "2025-02-13",
       "memo": ""
     },
     {
-      "id": "id0085",
-      "userId": "test3",
-      "amount": 2847794,
-      "type": "income",
-      "category": "월급",
-      "date": "2025-02-01",
-      "memo": ""
-    },
-    {
-      "id": "id0086",
-      "userId": "test3",
-      "amount": 206664,
+      "id": "93683e",
+      "userId": "test1",
+      "amount": 149973,
       "type": "expense",
-      "category": "문화",
-      "date": "2025-02-22",
+      "category": "식비",
+      "date": "2025-02-13",
       "memo": ""
     },
     {
-      "id": "id0087",
-      "userId": "test3",
-      "amount": 497215,
+      "id": "bd5e4c",
+      "userId": "test1",
+      "amount": 329360,
       "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-02-24",
+      "category": "교통비",
+      "date": "2025-02-13",
       "memo": ""
     },
     {
-      "id": "id0088",
-      "userId": "test3",
-      "amount": 2322277,
+      "id": "09aa9d",
+      "userId": "test1",
+      "amount": 290043,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-02-13",
+      "memo": ""
+    },
+    {
+      "id": "2f5f9c",
+      "userId": "test1",
+      "amount": 1485359,
       "type": "income",
       "category": "용돈",
-      "date": "2025-02-03",
-      "memo": ""
-    },
-    {
-      "id": "id0089",
-      "userId": "test3",
-      "amount": 183271,
-      "type": "expense",
-      "category": "여행",
-      "date": "2025-02-08",
-      "memo": ""
-    },
-    {
-      "id": "id0090",
-      "userId": "test3",
-      "amount": 24888,
-      "type": "expense",
-      "category": "여행",
       "date": "2025-02-20",
       "memo": ""
     },
     {
-      "id": "id0091",
-      "userId": "test3",
-      "amount": 576477,
-      "type": "income",
-      "category": "부수입",
-      "date": "2025-03-01",
+      "id": "d247c5",
+      "userId": "test1",
+      "amount": 151530,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-02-20",
       "memo": ""
     },
     {
-      "id": "id0092",
-      "userId": "test3",
-      "amount": 146073,
+      "id": "ccd844",
+      "userId": "test1",
+      "amount": 125141,
       "type": "expense",
       "category": "쇼핑",
-      "date": "2025-03-08",
+      "date": "2025-02-20",
       "memo": ""
     },
     {
-      "id": "id0093",
-      "userId": "test3",
-      "amount": 289784,
+      "id": "827394",
+      "userId": "test1",
+      "amount": 1034620,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-03-03",
+      "memo": ""
+    },
+    {
+      "id": "e922da",
+      "userId": "test1",
+      "amount": 432075,
       "type": "expense",
-      "category": "여행",
-      "date": "2025-03-25",
+      "category": "쇼핑",
+      "date": "2025-03-03",
       "memo": ""
     },
     {
-      "id": "id0094",
-      "userId": "test3",
-      "amount": 1722535,
+      "id": "a86d5a",
+      "userId": "test1",
+      "amount": 2482607,
       "type": "income",
       "category": "용돈",
       "date": "2025-03-05",
       "memo": ""
     },
     {
-      "id": "id0095",
-      "userId": "test3",
-      "amount": 301868,
+      "id": "92b714",
+      "userId": "test1",
+      "amount": 120615,
       "type": "expense",
-      "category": "교통비",
-      "date": "2025-03-11",
+      "category": "문화",
+      "date": "2025-03-05",
       "memo": ""
     },
     {
-      "id": "id0096",
-      "userId": "test3",
-      "amount": 429271,
-      "type": "expense",
-      "category": "교통비",
-      "date": "2025-03-11",
-      "memo": ""
-    },
-    {
-      "id": "id0097",
-      "userId": "test3",
-      "amount": 2651714,
+      "id": "2284bd",
+      "userId": "test1",
+      "amount": 3811150,
       "type": "income",
-      "category": "월급",
-      "date": "2025-03-01",
+      "category": "용돈",
+      "date": "2025-03-17",
       "memo": ""
     },
     {
-      "id": "id0098",
-      "userId": "test3",
-      "amount": 470943,
-      "type": "expense",
-      "category": "쇼핑",
-      "date": "2025-03-14",
-      "memo": ""
-    },
-    {
-      "id": "id0099",
-      "userId": "test3",
-      "amount": 398463,
+      "id": "e551ef",
+      "userId": "test1",
+      "amount": 353638,
       "type": "expense",
       "category": "여행",
-      "date": "2025-03-07",
+      "date": "2025-03-17",
       "memo": ""
     },
     {
-      "id": "id0100",
-      "userId": "test3",
-      "amount": 2385055,
+      "id": "283712",
+      "userId": "test1",
+      "amount": 2459400,
       "type": "income",
-      "category": "월급",
-      "date": "2025-03-01",
-      "memo": "test"
+      "category": "부수입",
+      "date": "2025-03-24",
+      "memo": ""
     },
     {
-      "id": "8a87",
-      "userId": "test",
-      "date": "2025-04-10",
+      "id": "7bbb0f",
+      "userId": "test1",
+      "amount": 84905,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-03-24",
+      "memo": ""
+    },
+    {
+      "id": "a563b5",
+      "userId": "test1",
+      "amount": 83206,
       "type": "expense",
       "category": "교통비",
-      "amount": 30000,
+      "date": "2025-03-24",
       "memo": ""
     },
     {
-      "id": "a6c2",
-      "userId": "test",
-      "date": "2025-04-10",
+      "id": "084b17",
+      "userId": "test1",
+      "amount": 3924710,
       "type": "income",
-      "category": "월급",
-      "amount": 200000,
+      "category": "부수입",
+      "date": "2025-03-30",
       "memo": ""
     },
     {
-      "id": "ea72",
-      "date": "2025-04-16",
+      "id": "001b5f",
+      "userId": "test1",
+      "amount": 147752,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-03-30",
+      "memo": ""
+    },
+    {
+      "id": "d44b19",
+      "userId": "test1",
+      "amount": 234622,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-03-30",
+      "memo": ""
+    },
+    {
+      "id": "e0eb88",
+      "userId": "test1",
+      "amount": 219400,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-03-30",
+      "memo": ""
+    },
+    {
+      "id": "82191c",
+      "userId": "test1",
+      "amount": 1719897,
       "type": "income",
       "category": "월급",
-      "amount": 1500000,
-      "memo": "",
-      "userId": "test"
+      "date": "2025-04-02",
+      "memo": ""
+    },
+    {
+      "id": "00077a",
+      "userId": "test1",
+      "amount": 268744,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-04-02",
+      "memo": ""
+    },
+    {
+      "id": "6e0971",
+      "userId": "test1",
+      "amount": 406247,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-04-02",
+      "memo": ""
+    },
+    {
+      "id": "51bcf0",
+      "userId": "test1",
+      "amount": 461465,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-04-02",
+      "memo": ""
+    },
+    {
+      "id": "39bfdb",
+      "userId": "test1",
+      "amount": 1441062,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-04-13",
+      "memo": ""
+    },
+    {
+      "id": "9b6ab8",
+      "userId": "test1",
+      "amount": 425277,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-04-13",
+      "memo": ""
+    },
+    {
+      "id": "22c217",
+      "userId": "test1",
+      "amount": 3301520,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-04-19",
+      "memo": ""
+    },
+    {
+      "id": "06d0b1",
+      "userId": "test1",
+      "amount": 210078,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-04-19",
+      "memo": ""
+    },
+    {
+      "id": "cd700d",
+      "userId": "test1",
+      "amount": 255392,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-04-19",
+      "memo": ""
+    },
+    {
+      "id": "694d3b",
+      "userId": "test1",
+      "amount": 1854507,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-04-23",
+      "memo": ""
+    },
+    {
+      "id": "206557",
+      "userId": "test1",
+      "amount": 366664,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-04-23",
+      "memo": ""
+    },
+    {
+      "id": "c988e0",
+      "userId": "test1",
+      "amount": 3659300,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-04-30",
+      "memo": ""
+    },
+    {
+      "id": "8abc96",
+      "userId": "test1",
+      "amount": 412967,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-04-30",
+      "memo": ""
+    },
+    {
+      "id": "8c0619",
+      "userId": "test1",
+      "amount": 68485,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-04-30",
+      "memo": ""
+    },
+    {
+      "id": "07cb7f",
+      "userId": "test1",
+      "amount": 2623537,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-05-07",
+      "memo": ""
+    },
+    {
+      "id": "dac10d",
+      "userId": "test1",
+      "amount": 11701,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-05-07",
+      "memo": ""
+    },
+    {
+      "id": "13d4c6",
+      "userId": "test1",
+      "amount": 272451,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-05-07",
+      "memo": ""
+    },
+    {
+      "id": "463507",
+      "userId": "test1",
+      "amount": 2929371,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-05-15",
+      "memo": ""
+    },
+    {
+      "id": "178798",
+      "userId": "test1",
+      "amount": 166471,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-05-15",
+      "memo": ""
+    },
+    {
+      "id": "07a10c",
+      "userId": "test1",
+      "amount": 329275,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-05-15",
+      "memo": ""
+    },
+    {
+      "id": "700e5b",
+      "userId": "test1",
+      "amount": 90131,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-05-15",
+      "memo": ""
+    },
+    {
+      "id": "f7b6f3",
+      "userId": "test1",
+      "amount": 3998202,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-05-22",
+      "memo": ""
+    },
+    {
+      "id": "bd4d75",
+      "userId": "test1",
+      "amount": 418224,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-05-22",
+      "memo": ""
+    },
+    {
+      "id": "9c2738",
+      "userId": "test1",
+      "amount": 491555,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-05-22",
+      "memo": ""
+    },
+    {
+      "id": "bd0553",
+      "userId": "test1",
+      "amount": 324019,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-05-22",
+      "memo": ""
+    },
+    {
+      "id": "3b9213",
+      "userId": "test1",
+      "amount": 2849360,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-06-01",
+      "memo": ""
+    },
+    {
+      "id": "426eb8",
+      "userId": "test1",
+      "amount": 497115,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-06-01",
+      "memo": ""
+    },
+    {
+      "id": "780a85",
+      "userId": "test1",
+      "amount": 2089807,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-06-08",
+      "memo": ""
+    },
+    {
+      "id": "dbcfc8",
+      "userId": "test1",
+      "amount": 136286,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-06-08",
+      "memo": ""
+    },
+    {
+      "id": "92a42f",
+      "userId": "test1",
+      "amount": 1130331,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-06-11",
+      "memo": ""
+    },
+    {
+      "id": "9b6912",
+      "userId": "test1",
+      "amount": 264798,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-06-11",
+      "memo": ""
+    },
+    {
+      "id": "ec39d3",
+      "userId": "test1",
+      "amount": 408774,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-06-11",
+      "memo": ""
+    },
+    {
+      "id": "7e66d5",
+      "userId": "test1",
+      "amount": 411517,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-06-11",
+      "memo": ""
+    },
+    {
+      "id": "a40020",
+      "userId": "test1",
+      "amount": 1338512,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-06-22",
+      "memo": ""
+    },
+    {
+      "id": "35c4be",
+      "userId": "test1",
+      "amount": 298255,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-06-22",
+      "memo": ""
+    },
+    {
+      "id": "9c3600",
+      "userId": "test1",
+      "amount": 148966,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-06-22",
+      "memo": ""
+    },
+    {
+      "id": "0e131a",
+      "userId": "test1",
+      "amount": 3344239,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-06-26",
+      "memo": ""
+    },
+    {
+      "id": "98cc16",
+      "userId": "test1",
+      "amount": 497018,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-06-26",
+      "memo": ""
+    },
+    {
+      "id": "9182be",
+      "userId": "test1",
+      "amount": 3967811,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-07-07",
+      "memo": ""
+    },
+    {
+      "id": "a5ce59",
+      "userId": "test1",
+      "amount": 115461,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-07-07",
+      "memo": ""
+    },
+    {
+      "id": "ba1143",
+      "userId": "test1",
+      "amount": 219186,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-07-07",
+      "memo": ""
+    },
+    {
+      "id": "123336",
+      "userId": "test1",
+      "amount": 239690,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-07-07",
+      "memo": ""
+    },
+    {
+      "id": "757715",
+      "userId": "test1",
+      "amount": 2693670,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-07-14",
+      "memo": ""
+    },
+    {
+      "id": "6dcac8",
+      "userId": "test1",
+      "amount": 127806,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-07-14",
+      "memo": ""
+    },
+    {
+      "id": "be8dda",
+      "userId": "test1",
+      "amount": 2218033,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-07-21",
+      "memo": ""
+    },
+    {
+      "id": "efe85a",
+      "userId": "test1",
+      "amount": 300414,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-07-21",
+      "memo": ""
+    },
+    {
+      "id": "28e8ef",
+      "userId": "test1",
+      "amount": 318512,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-07-21",
+      "memo": ""
+    },
+    {
+      "id": "57212f",
+      "userId": "test1",
+      "amount": 13770,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-07-21",
+      "memo": ""
+    },
+    {
+      "id": "4f0ec4",
+      "userId": "test1",
+      "amount": 3768900,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-07-27",
+      "memo": ""
+    },
+    {
+      "id": "557d3e",
+      "userId": "test1",
+      "amount": 130031,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-07-27",
+      "memo": ""
+    },
+    {
+      "id": "e14400",
+      "userId": "test1",
+      "amount": 931755,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-08-02",
+      "memo": ""
+    },
+    {
+      "id": "837c78",
+      "userId": "test1",
+      "amount": 279565,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-08-02",
+      "memo": ""
+    },
+    {
+      "id": "af792a",
+      "userId": "test1",
+      "amount": 1968018,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-08-07",
+      "memo": ""
+    },
+    {
+      "id": "e2f039",
+      "userId": "test1",
+      "amount": 122321,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-08-07",
+      "memo": ""
+    },
+    {
+      "id": "0138a8",
+      "userId": "test1",
+      "amount": 79369,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-08-07",
+      "memo": ""
+    },
+    {
+      "id": "fd89c3",
+      "userId": "test1",
+      "amount": 3216806,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-08-16",
+      "memo": ""
+    },
+    {
+      "id": "abf829",
+      "userId": "test1",
+      "amount": 421366,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-08-16",
+      "memo": ""
+    },
+    {
+      "id": "8536c6",
+      "userId": "test1",
+      "amount": 2507333,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-08-24",
+      "memo": ""
+    },
+    {
+      "id": "e38ed8",
+      "userId": "test1",
+      "amount": 60819,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-08-24",
+      "memo": ""
+    },
+    {
+      "id": "dad2d7",
+      "userId": "test1",
+      "amount": 2286031,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-08-29",
+      "memo": ""
+    },
+    {
+      "id": "0a5449",
+      "userId": "test1",
+      "amount": 254855,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-08-29",
+      "memo": ""
+    },
+    {
+      "id": "c5933b",
+      "userId": "test1",
+      "amount": 363036,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-08-29",
+      "memo": ""
+    },
+    {
+      "id": "d552f4",
+      "userId": "test1",
+      "amount": 1054227,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-09-09",
+      "memo": ""
+    },
+    {
+      "id": "e56787",
+      "userId": "test1",
+      "amount": 187892,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-09-09",
+      "memo": ""
+    },
+    {
+      "id": "a53fe6",
+      "userId": "test1",
+      "amount": 140367,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-09-09",
+      "memo": ""
+    },
+    {
+      "id": "7aa872",
+      "userId": "test1",
+      "amount": 109724,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-09-09",
+      "memo": ""
+    },
+    {
+      "id": "75bf58",
+      "userId": "test1",
+      "amount": 2681621,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-09-16",
+      "memo": ""
+    },
+    {
+      "id": "18aad4",
+      "userId": "test1",
+      "amount": 106200,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-09-16",
+      "memo": ""
+    },
+    {
+      "id": "cc48da",
+      "userId": "test1",
+      "amount": 252550,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-09-16",
+      "memo": ""
+    },
+    {
+      "id": "d96d96",
+      "userId": "test1",
+      "amount": 1116187,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-09-17",
+      "memo": ""
+    },
+    {
+      "id": "94e7cd",
+      "userId": "test1",
+      "amount": 61332,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-09-17",
+      "memo": ""
+    },
+    {
+      "id": "09293a",
+      "userId": "test1",
+      "amount": 351911,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-09-17",
+      "memo": ""
+    },
+    {
+      "id": "1b562d",
+      "userId": "test1",
+      "amount": 448319,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-09-17",
+      "memo": ""
+    },
+    {
+      "id": "1ba60b",
+      "userId": "test1",
+      "amount": 1191172,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-09-30",
+      "memo": ""
+    },
+    {
+      "id": "8db16c",
+      "userId": "test1",
+      "amount": 223078,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-09-30",
+      "memo": ""
+    },
+    {
+      "id": "020e7e",
+      "userId": "test1",
+      "amount": 2818963,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-10-07",
+      "memo": ""
+    },
+    {
+      "id": "eadfc5",
+      "userId": "test1",
+      "amount": 483139,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-10-07",
+      "memo": ""
+    },
+    {
+      "id": "9de08d",
+      "userId": "test1",
+      "amount": 96317,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-10-07",
+      "memo": ""
+    },
+    {
+      "id": "5967f6",
+      "userId": "test1",
+      "amount": 809040,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-10-09",
+      "memo": ""
+    },
+    {
+      "id": "d234f9",
+      "userId": "test1",
+      "amount": 495762,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-10-09",
+      "memo": ""
+    },
+    {
+      "id": "12056f",
+      "userId": "test1",
+      "amount": 159552,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-10-09",
+      "memo": ""
+    },
+    {
+      "id": "06ed71",
+      "userId": "test1",
+      "amount": 3721716,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-10-20",
+      "memo": ""
+    },
+    {
+      "id": "139cab",
+      "userId": "test1",
+      "amount": 357011,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-10-20",
+      "memo": ""
+    },
+    {
+      "id": "812b3b",
+      "userId": "test1",
+      "amount": 91158,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-10-20",
+      "memo": ""
+    },
+    {
+      "id": "7a6c92",
+      "userId": "test1",
+      "amount": 165560,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-10-20",
+      "memo": ""
+    },
+    {
+      "id": "18d617",
+      "userId": "test1",
+      "amount": 1045296,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-10-25",
+      "memo": ""
+    },
+    {
+      "id": "affff5",
+      "userId": "test1",
+      "amount": 294266,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-10-25",
+      "memo": ""
+    },
+    {
+      "id": "208cb8",
+      "userId": "test1",
+      "amount": 402154,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-10-25",
+      "memo": ""
+    },
+    {
+      "id": "cf0281",
+      "userId": "test1",
+      "amount": 39971,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-10-25",
+      "memo": ""
+    },
+    {
+      "id": "a6b864",
+      "userId": "test1",
+      "amount": 3250218,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-10-31",
+      "memo": ""
+    },
+    {
+      "id": "8381c8",
+      "userId": "test1",
+      "amount": 492023,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-10-31",
+      "memo": ""
+    },
+    {
+      "id": "11c649",
+      "userId": "test1",
+      "amount": 92540,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-10-31",
+      "memo": ""
+    },
+    {
+      "id": "312478",
+      "userId": "test1",
+      "amount": 276248,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-10-31",
+      "memo": ""
+    },
+    {
+      "id": "cc0091",
+      "userId": "test1",
+      "amount": 1579406,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-11-07",
+      "memo": ""
+    },
+    {
+      "id": "5af562",
+      "userId": "test1",
+      "amount": 45631,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-11-07",
+      "memo": ""
+    },
+    {
+      "id": "d519b6",
+      "userId": "test1",
+      "amount": 221694,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-11-07",
+      "memo": ""
+    },
+    {
+      "id": "669e47",
+      "userId": "test1",
+      "amount": 476766,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-11-07",
+      "memo": ""
+    },
+    {
+      "id": "165bf8",
+      "userId": "test1",
+      "amount": 1832702,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-11-13",
+      "memo": ""
+    },
+    {
+      "id": "557e6a",
+      "userId": "test1",
+      "amount": 30836,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-11-13",
+      "memo": ""
+    },
+    {
+      "id": "ce2253",
+      "userId": "test1",
+      "amount": 52982,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-11-13",
+      "memo": ""
+    },
+    {
+      "id": "2d0e0d",
+      "userId": "test1",
+      "amount": 354652,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-11-13",
+      "memo": ""
+    },
+    {
+      "id": "cad5ce",
+      "userId": "test1",
+      "amount": 3170733,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-11-20",
+      "memo": ""
+    },
+    {
+      "id": "54b84a",
+      "userId": "test1",
+      "amount": 146716,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-11-20",
+      "memo": ""
+    },
+    {
+      "id": "4f7bd0",
+      "userId": "test1",
+      "amount": 361129,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-11-20",
+      "memo": ""
+    },
+    {
+      "id": "cb3247",
+      "userId": "test2",
+      "amount": 1801121,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-01-06",
+      "memo": ""
+    },
+    {
+      "id": "d497df",
+      "userId": "test2",
+      "amount": 78617,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-01-06",
+      "memo": ""
+    },
+    {
+      "id": "823476",
+      "userId": "test2",
+      "amount": 249717,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-01-06",
+      "memo": ""
+    },
+    {
+      "id": "3157ca",
+      "userId": "test2",
+      "amount": 3953548,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-01-08",
+      "memo": ""
+    },
+    {
+      "id": "79120e",
+      "userId": "test2",
+      "amount": 250273,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-01-08",
+      "memo": ""
+    },
+    {
+      "id": "0bd539",
+      "userId": "test2",
+      "amount": 3161366,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-01-15",
+      "memo": ""
+    },
+    {
+      "id": "305755",
+      "userId": "test2",
+      "amount": 291875,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-01-15",
+      "memo": ""
+    },
+    {
+      "id": "86b83a",
+      "userId": "test2",
+      "amount": 2921834,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-01-27",
+      "memo": ""
+    },
+    {
+      "id": "8f5ab9",
+      "userId": "test2",
+      "amount": 499296,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-01-27",
+      "memo": ""
+    },
+    {
+      "id": "3de9c6",
+      "userId": "test2",
+      "amount": 1088531,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-01-31",
+      "memo": ""
+    },
+    {
+      "id": "222c1e",
+      "userId": "test2",
+      "amount": 159415,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-01-31",
+      "memo": ""
+    },
+    {
+      "id": "d576fd",
+      "userId": "test2",
+      "amount": 239734,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-01-31",
+      "memo": ""
+    },
+    {
+      "id": "e1cad8",
+      "userId": "test2",
+      "amount": 3750860,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-02-06",
+      "memo": ""
+    },
+    {
+      "id": "a942c6",
+      "userId": "test2",
+      "amount": 433152,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-02-06",
+      "memo": ""
+    },
+    {
+      "id": "841957",
+      "userId": "test2",
+      "amount": 14101,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-02-06",
+      "memo": ""
+    },
+    {
+      "id": "de770a",
+      "userId": "test2",
+      "amount": 166960,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-02-06",
+      "memo": ""
+    },
+    {
+      "id": "eb61b6",
+      "userId": "test2",
+      "amount": 1363257,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-02-13",
+      "memo": ""
+    },
+    {
+      "id": "2fea91",
+      "userId": "test2",
+      "amount": 476465,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-02-13",
+      "memo": ""
+    },
+    {
+      "id": "51d13e",
+      "userId": "test2",
+      "amount": 3913921,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-02-20",
+      "memo": ""
+    },
+    {
+      "id": "f81d74",
+      "userId": "test2",
+      "amount": 152788,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-02-20",
+      "memo": ""
+    },
+    {
+      "id": "3b0b46",
+      "userId": "test2",
+      "amount": 3336840,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-03-03",
+      "memo": ""
+    },
+    {
+      "id": "796e14",
+      "userId": "test2",
+      "amount": 189768,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-03-03",
+      "memo": ""
+    },
+    {
+      "id": "a14408",
+      "userId": "test2",
+      "amount": 370446,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-03-03",
+      "memo": ""
+    },
+    {
+      "id": "016ef9",
+      "userId": "test2",
+      "amount": 274979,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-03-03",
+      "memo": ""
+    },
+    {
+      "id": "f349d7",
+      "userId": "test2",
+      "amount": 1853278,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-03-05",
+      "memo": ""
+    },
+    {
+      "id": "0a7075",
+      "userId": "test2",
+      "amount": 342547,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-03-05",
+      "memo": ""
+    },
+    {
+      "id": "f1cb4a",
+      "userId": "test2",
+      "amount": 1960480,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-03-17",
+      "memo": ""
+    },
+    {
+      "id": "c852cc",
+      "userId": "test2",
+      "amount": 184879,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-03-17",
+      "memo": ""
+    },
+    {
+      "id": "4291ee",
+      "userId": "test2",
+      "amount": 3472247,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-03-24",
+      "memo": ""
+    },
+    {
+      "id": "169e56",
+      "userId": "test2",
+      "amount": 398618,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-03-24",
+      "memo": ""
+    },
+    {
+      "id": "65a892",
+      "userId": "test2",
+      "amount": 3113915,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-03-30",
+      "memo": ""
+    },
+    {
+      "id": "83a5e4",
+      "userId": "test2",
+      "amount": 304076,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-03-30",
+      "memo": ""
+    },
+    {
+      "id": "6bf428",
+      "userId": "test2",
+      "amount": 68654,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-03-30",
+      "memo": ""
+    },
+    {
+      "id": "8750dd",
+      "userId": "test2",
+      "amount": 3698346,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-04-02",
+      "memo": ""
+    },
+    {
+      "id": "6f5f74",
+      "userId": "test2",
+      "amount": 28889,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-04-02",
+      "memo": ""
+    },
+    {
+      "id": "f7f1ff",
+      "userId": "test2",
+      "amount": 315402,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-04-02",
+      "memo": ""
+    },
+    {
+      "id": "80eee7",
+      "userId": "test2",
+      "amount": 87643,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-04-02",
+      "memo": ""
+    },
+    {
+      "id": "0edc4b",
+      "userId": "test2",
+      "amount": 1334545,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-04-13",
+      "memo": ""
+    },
+    {
+      "id": "921617",
+      "userId": "test2",
+      "amount": 201182,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-04-13",
+      "memo": ""
+    },
+    {
+      "id": "4e16ce",
+      "userId": "test2",
+      "amount": 481295,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-04-13",
+      "memo": ""
+    },
+    {
+      "id": "ef83df",
+      "userId": "test2",
+      "amount": 1681124,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-04-19",
+      "memo": ""
+    },
+    {
+      "id": "b27c21",
+      "userId": "test2",
+      "amount": 359665,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-04-19",
+      "memo": ""
+    },
+    {
+      "id": "f8e3a6",
+      "userId": "test2",
+      "amount": 2283435,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-04-23",
+      "memo": ""
+    },
+    {
+      "id": "61dda2",
+      "userId": "test2",
+      "amount": 335405,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-04-23",
+      "memo": ""
+    },
+    {
+      "id": "80efc1",
+      "userId": "test2",
+      "amount": 495366,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-04-23",
+      "memo": ""
+    },
+    {
+      "id": "30622d",
+      "userId": "test2",
+      "amount": 1481581,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-04-30",
+      "memo": ""
+    },
+    {
+      "id": "f8d429",
+      "userId": "test2",
+      "amount": 22995,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-04-30",
+      "memo": ""
+    },
+    {
+      "id": "788c4e",
+      "userId": "test2",
+      "amount": 396171,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-04-30",
+      "memo": ""
+    },
+    {
+      "id": "fcd82c",
+      "userId": "test2",
+      "amount": 2526850,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-05-07",
+      "memo": ""
+    },
+    {
+      "id": "c26546",
+      "userId": "test2",
+      "amount": 435066,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-05-07",
+      "memo": ""
+    },
+    {
+      "id": "59ac3b",
+      "userId": "test2",
+      "amount": 149883,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-05-07",
+      "memo": ""
+    },
+    {
+      "id": "cf993b",
+      "userId": "test2",
+      "amount": 422811,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-05-07",
+      "memo": ""
+    },
+    {
+      "id": "96bc60",
+      "userId": "test2",
+      "amount": 2404496,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-05-15",
+      "memo": ""
+    },
+    {
+      "id": "31e94b",
+      "userId": "test2",
+      "amount": 126619,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-05-15",
+      "memo": ""
+    },
+    {
+      "id": "061588",
+      "userId": "test2",
+      "amount": 438126,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-05-15",
+      "memo": ""
+    },
+    {
+      "id": "973ce3",
+      "userId": "test2",
+      "amount": 2266573,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-05-22",
+      "memo": ""
+    },
+    {
+      "id": "e36496",
+      "userId": "test2",
+      "amount": 126876,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-05-22",
+      "memo": ""
+    },
+    {
+      "id": "e9cf3b",
+      "userId": "test2",
+      "amount": 3568379,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-06-01",
+      "memo": ""
+    },
+    {
+      "id": "aeda26",
+      "userId": "test2",
+      "amount": 182103,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-06-01",
+      "memo": ""
+    },
+    {
+      "id": "452dec",
+      "userId": "test2",
+      "amount": 463169,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-06-01",
+      "memo": ""
+    },
+    {
+      "id": "2d7aab",
+      "userId": "test2",
+      "amount": 1970735,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-06-08",
+      "memo": ""
+    },
+    {
+      "id": "78d5d4",
+      "userId": "test2",
+      "amount": 277075,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-06-08",
+      "memo": ""
+    },
+    {
+      "id": "b13c72",
+      "userId": "test2",
+      "amount": 366263,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-06-08",
+      "memo": ""
+    },
+    {
+      "id": "a30e09",
+      "userId": "test2",
+      "amount": 183617,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-06-08",
+      "memo": ""
+    },
+    {
+      "id": "7c7a78",
+      "userId": "test2",
+      "amount": 1283778,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-06-11",
+      "memo": ""
+    },
+    {
+      "id": "526add",
+      "userId": "test2",
+      "amount": 314396,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-06-11",
+      "memo": ""
+    },
+    {
+      "id": "67b68b",
+      "userId": "test2",
+      "amount": 960462,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-06-22",
+      "memo": ""
+    },
+    {
+      "id": "6f78f9",
+      "userId": "test2",
+      "amount": 237836,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-06-22",
+      "memo": ""
+    },
+    {
+      "id": "08b64d",
+      "userId": "test2",
+      "amount": 391967,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-06-22",
+      "memo": ""
+    },
+    {
+      "id": "847e74",
+      "userId": "test2",
+      "amount": 238796,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-06-22",
+      "memo": ""
+    },
+    {
+      "id": "75aedf",
+      "userId": "test2",
+      "amount": 2945063,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-06-26",
+      "memo": ""
+    },
+    {
+      "id": "0298fb",
+      "userId": "test2",
+      "amount": 481599,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-06-26",
+      "memo": ""
+    },
+    {
+      "id": "93d58a",
+      "userId": "test2",
+      "amount": 109656,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-06-26",
+      "memo": ""
+    },
+    {
+      "id": "3e8d76",
+      "userId": "test2",
+      "amount": 986170,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-07-07",
+      "memo": ""
+    },
+    {
+      "id": "fd2b3c",
+      "userId": "test2",
+      "amount": 10886,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-07-07",
+      "memo": ""
+    },
+    {
+      "id": "b3b72e",
+      "userId": "test2",
+      "amount": 495267,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-07-07",
+      "memo": ""
+    },
+    {
+      "id": "46b29c",
+      "userId": "test2",
+      "amount": 3680887,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-07-14",
+      "memo": ""
+    },
+    {
+      "id": "b582e1",
+      "userId": "test2",
+      "amount": 396420,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-07-14",
+      "memo": ""
+    },
+    {
+      "id": "f98204",
+      "userId": "test2",
+      "amount": 200956,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-07-14",
+      "memo": ""
+    },
+    {
+      "id": "1f0fa6",
+      "userId": "test2",
+      "amount": 46686,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-07-14",
+      "memo": ""
+    },
+    {
+      "id": "cdda56",
+      "userId": "test2",
+      "amount": 3413703,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-07-21",
+      "memo": ""
+    },
+    {
+      "id": "eae95e",
+      "userId": "test2",
+      "amount": 454604,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-07-21",
+      "memo": ""
+    },
+    {
+      "id": "4dab1b",
+      "userId": "test2",
+      "amount": 387358,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-07-21",
+      "memo": ""
+    },
+    {
+      "id": "58cdd6",
+      "userId": "test2",
+      "amount": 275878,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-07-21",
+      "memo": ""
+    },
+    {
+      "id": "00c06e",
+      "userId": "test2",
+      "amount": 3597151,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-07-27",
+      "memo": ""
+    },
+    {
+      "id": "d51246",
+      "userId": "test2",
+      "amount": 220973,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-07-27",
+      "memo": ""
+    },
+    {
+      "id": "860301",
+      "userId": "test2",
+      "amount": 300671,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-07-27",
+      "memo": ""
+    },
+    {
+      "id": "1139c5",
+      "userId": "test2",
+      "amount": 1604635,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-08-02",
+      "memo": ""
+    },
+    {
+      "id": "0e46b7",
+      "userId": "test2",
+      "amount": 208781,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-08-02",
+      "memo": ""
+    },
+    {
+      "id": "a184cc",
+      "userId": "test2",
+      "amount": 332707,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-08-02",
+      "memo": ""
+    },
+    {
+      "id": "4a7a5e",
+      "userId": "test2",
+      "amount": 167784,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-08-02",
+      "memo": ""
+    },
+    {
+      "id": "eaf697",
+      "userId": "test2",
+      "amount": 3098215,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-08-07",
+      "memo": ""
+    },
+    {
+      "id": "a86cc5",
+      "userId": "test2",
+      "amount": 160425,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-08-07",
+      "memo": ""
+    },
+    {
+      "id": "3abc30",
+      "userId": "test2",
+      "amount": 235385,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-08-07",
+      "memo": ""
+    },
+    {
+      "id": "1e7f60",
+      "userId": "test2",
+      "amount": 3344523,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-08-16",
+      "memo": ""
+    },
+    {
+      "id": "cfa54e",
+      "userId": "test2",
+      "amount": 253787,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-08-16",
+      "memo": ""
+    },
+    {
+      "id": "82b477",
+      "userId": "test2",
+      "amount": 241819,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-08-16",
+      "memo": ""
+    },
+    {
+      "id": "5e346d",
+      "userId": "test2",
+      "amount": 2944019,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-08-24",
+      "memo": ""
+    },
+    {
+      "id": "6d261b",
+      "userId": "test2",
+      "amount": 98967,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-08-24",
+      "memo": ""
+    },
+    {
+      "id": "fb7368",
+      "userId": "test2",
+      "amount": 158785,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-08-24",
+      "memo": ""
+    },
+    {
+      "id": "ca3bc6",
+      "userId": "test2",
+      "amount": 358050,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-08-24",
+      "memo": ""
+    },
+    {
+      "id": "67b24f",
+      "userId": "test2",
+      "amount": 2205881,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-08-29",
+      "memo": ""
+    },
+    {
+      "id": "09930d",
+      "userId": "test2",
+      "amount": 362738,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-08-29",
+      "memo": ""
+    },
+    {
+      "id": "3d16b3",
+      "userId": "test2",
+      "amount": 1742211,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-09-09",
+      "memo": ""
+    },
+    {
+      "id": "d3e864",
+      "userId": "test2",
+      "amount": 22805,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-09-09",
+      "memo": ""
+    },
+    {
+      "id": "e1328b",
+      "userId": "test2",
+      "amount": 1826944,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-09-16",
+      "memo": ""
+    },
+    {
+      "id": "e64a1f",
+      "userId": "test2",
+      "amount": 455507,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-09-16",
+      "memo": ""
+    },
+    {
+      "id": "4102dd",
+      "userId": "test2",
+      "amount": 248769,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-09-16",
+      "memo": ""
+    },
+    {
+      "id": "144e82",
+      "userId": "test2",
+      "amount": 474590,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-09-16",
+      "memo": ""
+    },
+    {
+      "id": "4e28a2",
+      "userId": "test2",
+      "amount": 1615520,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-09-17",
+      "memo": ""
+    },
+    {
+      "id": "6c20dc",
+      "userId": "test2",
+      "amount": 211315,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-09-17",
+      "memo": ""
+    },
+    {
+      "id": "abe3be",
+      "userId": "test2",
+      "amount": 219533,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-09-17",
+      "memo": ""
+    },
+    {
+      "id": "4c2838",
+      "userId": "test2",
+      "amount": 87369,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-09-17",
+      "memo": ""
+    },
+    {
+      "id": "61b151",
+      "userId": "test2",
+      "amount": 3949773,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-09-30",
+      "memo": ""
+    },
+    {
+      "id": "66349d",
+      "userId": "test2",
+      "amount": 124735,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-09-30",
+      "memo": ""
+    },
+    {
+      "id": "30195a",
+      "userId": "test2",
+      "amount": 431585,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-09-30",
+      "memo": ""
+    },
+    {
+      "id": "ce8cd4",
+      "userId": "test2",
+      "amount": 2748463,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-10-07",
+      "memo": ""
+    },
+    {
+      "id": "0fc719",
+      "userId": "test2",
+      "amount": 140651,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-10-07",
+      "memo": ""
+    },
+    {
+      "id": "360062",
+      "userId": "test2",
+      "amount": 249317,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-10-07",
+      "memo": ""
+    },
+    {
+      "id": "cf40a3",
+      "userId": "test2",
+      "amount": 430173,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-10-07",
+      "memo": ""
+    },
+    {
+      "id": "3caa24",
+      "userId": "test2",
+      "amount": 3600023,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-10-09",
+      "memo": ""
+    },
+    {
+      "id": "a32a49",
+      "userId": "test2",
+      "amount": 322188,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-10-09",
+      "memo": ""
+    },
+    {
+      "id": "f3901a",
+      "userId": "test2",
+      "amount": 405968,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-10-09",
+      "memo": ""
+    },
+    {
+      "id": "4d97bf",
+      "userId": "test2",
+      "amount": 331206,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-10-09",
+      "memo": ""
+    },
+    {
+      "id": "70ca03",
+      "userId": "test2",
+      "amount": 2589880,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-10-20",
+      "memo": ""
+    },
+    {
+      "id": "9dc601",
+      "userId": "test2",
+      "amount": 480395,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-10-20",
+      "memo": ""
+    },
+    {
+      "id": "39528d",
+      "userId": "test2",
+      "amount": 399889,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-10-20",
+      "memo": ""
+    },
+    {
+      "id": "9fc37d",
+      "userId": "test2",
+      "amount": 2687729,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-10-25",
+      "memo": ""
+    },
+    {
+      "id": "f4d1bc",
+      "userId": "test2",
+      "amount": 450330,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-10-25",
+      "memo": ""
+    },
+    {
+      "id": "89c9a2",
+      "userId": "test2",
+      "amount": 2986489,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-10-31",
+      "memo": ""
+    },
+    {
+      "id": "7005a7",
+      "userId": "test2",
+      "amount": 135433,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-10-31",
+      "memo": ""
+    },
+    {
+      "id": "8d534b",
+      "userId": "test2",
+      "amount": 240619,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-10-31",
+      "memo": ""
+    },
+    {
+      "id": "a164db",
+      "userId": "test2",
+      "amount": 384103,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-10-31",
+      "memo": ""
+    },
+    {
+      "id": "583490",
+      "userId": "test2",
+      "amount": 1783537,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-11-07",
+      "memo": ""
+    },
+    {
+      "id": "9b3fe8",
+      "userId": "test2",
+      "amount": 177619,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-11-07",
+      "memo": ""
+    },
+    {
+      "id": "4dc6d7",
+      "userId": "test2",
+      "amount": 52245,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-11-07",
+      "memo": ""
+    },
+    {
+      "id": "69e01b",
+      "userId": "test2",
+      "amount": 1432629,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-11-13",
+      "memo": ""
+    },
+    {
+      "id": "bb20c6",
+      "userId": "test2",
+      "amount": 373829,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-11-13",
+      "memo": ""
+    },
+    {
+      "id": "4fece8",
+      "userId": "test2",
+      "amount": 380367,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-11-13",
+      "memo": ""
+    },
+    {
+      "id": "d6569f",
+      "userId": "test2",
+      "amount": 1069395,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-11-20",
+      "memo": ""
+    },
+    {
+      "id": "82bec8",
+      "userId": "test2",
+      "amount": 183477,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-11-20",
+      "memo": ""
+    },
+    {
+      "id": "17f4bc",
+      "userId": "test2",
+      "amount": 254278,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-11-20",
+      "memo": ""
+    },
+    {
+      "id": "12055d",
+      "userId": "test3",
+      "amount": 1061161,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-01-06",
+      "memo": ""
+    },
+    {
+      "id": "5e325a",
+      "userId": "test3",
+      "amount": 214198,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-01-06",
+      "memo": ""
+    },
+    {
+      "id": "03878b",
+      "userId": "test3",
+      "amount": 374654,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-01-06",
+      "memo": ""
+    },
+    {
+      "id": "96573d",
+      "userId": "test3",
+      "amount": 3214620,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-01-08",
+      "memo": ""
+    },
+    {
+      "id": "345f1f",
+      "userId": "test3",
+      "amount": 13091,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-01-08",
+      "memo": ""
+    },
+    {
+      "id": "c518f1",
+      "userId": "test3",
+      "amount": 166559,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-01-08",
+      "memo": ""
+    },
+    {
+      "id": "993072",
+      "userId": "test3",
+      "amount": 2557502,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-01-15",
+      "memo": ""
+    },
+    {
+      "id": "5babee",
+      "userId": "test3",
+      "amount": 395159,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-01-15",
+      "memo": ""
+    },
+    {
+      "id": "f6a62d",
+      "userId": "test3",
+      "amount": 429361,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-01-15",
+      "memo": ""
+    },
+    {
+      "id": "f654df",
+      "userId": "test3",
+      "amount": 480711,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-01-15",
+      "memo": ""
+    },
+    {
+      "id": "c7681b",
+      "userId": "test3",
+      "amount": 2847782,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-01-27",
+      "memo": ""
+    },
+    {
+      "id": "3a69aa",
+      "userId": "test3",
+      "amount": 238503,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-01-27",
+      "memo": ""
+    },
+    {
+      "id": "92bc43",
+      "userId": "test3",
+      "amount": 25217,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-01-27",
+      "memo": ""
+    },
+    {
+      "id": "7a73c3",
+      "userId": "test3",
+      "amount": 2209829,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-01-31",
+      "memo": ""
+    },
+    {
+      "id": "0da835",
+      "userId": "test3",
+      "amount": 428456,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-01-31",
+      "memo": ""
+    },
+    {
+      "id": "5a182e",
+      "userId": "test3",
+      "amount": 389679,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-01-31",
+      "memo": ""
+    },
+    {
+      "id": "0cba04",
+      "userId": "test3",
+      "amount": 450667,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-01-31",
+      "memo": ""
+    },
+    {
+      "id": "0ebaf1",
+      "userId": "test3",
+      "amount": 1335309,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-02-06",
+      "memo": ""
+    },
+    {
+      "id": "16ab36",
+      "userId": "test3",
+      "amount": 24138,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-02-06",
+      "memo": ""
+    },
+    {
+      "id": "79c6ec",
+      "userId": "test3",
+      "amount": 320322,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-02-06",
+      "memo": ""
+    },
+    {
+      "id": "9a57d8",
+      "userId": "test3",
+      "amount": 357602,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-02-06",
+      "memo": ""
+    },
+    {
+      "id": "430a7c",
+      "userId": "test3",
+      "amount": 1152101,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-02-13",
+      "memo": ""
+    },
+    {
+      "id": "5d5180",
+      "userId": "test3",
+      "amount": 81145,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-02-13",
+      "memo": ""
+    },
+    {
+      "id": "90b390",
+      "userId": "test3",
+      "amount": 105278,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-02-13",
+      "memo": ""
+    },
+    {
+      "id": "2583fd",
+      "userId": "test3",
+      "amount": 1891174,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-02-20",
+      "memo": ""
+    },
+    {
+      "id": "8c5157",
+      "userId": "test3",
+      "amount": 120970,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-02-20",
+      "memo": ""
+    },
+    {
+      "id": "75b778",
+      "userId": "test3",
+      "amount": 181361,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-02-20",
+      "memo": ""
+    },
+    {
+      "id": "978565",
+      "userId": "test3",
+      "amount": 3992828,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-03-03",
+      "memo": ""
+    },
+    {
+      "id": "da918a",
+      "userId": "test3",
+      "amount": 404269,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-03-03",
+      "memo": ""
+    },
+    {
+      "id": "d5b7a5",
+      "userId": "test3",
+      "amount": 142262,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-03-03",
+      "memo": ""
+    },
+    {
+      "id": "067524",
+      "userId": "test3",
+      "amount": 2772609,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-03-05",
+      "memo": ""
+    },
+    {
+      "id": "e5faad",
+      "userId": "test3",
+      "amount": 292810,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-03-05",
+      "memo": ""
+    },
+    {
+      "id": "7ac97b",
+      "userId": "test3",
+      "amount": 193480,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-03-05",
+      "memo": ""
+    },
+    {
+      "id": "921aac",
+      "userId": "test3",
+      "amount": 350862,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-03-05",
+      "memo": ""
+    },
+    {
+      "id": "65d563",
+      "userId": "test3",
+      "amount": 3533657,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-03-17",
+      "memo": ""
+    },
+    {
+      "id": "5bee86",
+      "userId": "test3",
+      "amount": 139647,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-03-17",
+      "memo": ""
+    },
+    {
+      "id": "52da0a",
+      "userId": "test3",
+      "amount": 885479,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-03-24",
+      "memo": ""
+    },
+    {
+      "id": "8b3121",
+      "userId": "test3",
+      "amount": 135066,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-03-24",
+      "memo": ""
+    },
+    {
+      "id": "7c5027",
+      "userId": "test3",
+      "amount": 2786259,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-03-30",
+      "memo": ""
+    },
+    {
+      "id": "a5a93e",
+      "userId": "test3",
+      "amount": 305682,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-03-30",
+      "memo": ""
+    },
+    {
+      "id": "01d0af",
+      "userId": "test3",
+      "amount": 2750493,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-04-02",
+      "memo": ""
+    },
+    {
+      "id": "d492a1",
+      "userId": "test3",
+      "amount": 412075,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-04-02",
+      "memo": ""
+    },
+    {
+      "id": "b52996",
+      "userId": "test3",
+      "amount": 97969,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-04-02",
+      "memo": ""
+    },
+    {
+      "id": "6eb5dd",
+      "userId": "test3",
+      "amount": 3346980,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-04-13",
+      "memo": ""
+    },
+    {
+      "id": "b6b637",
+      "userId": "test3",
+      "amount": 70048,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-04-13",
+      "memo": ""
+    },
+    {
+      "id": "839f4c",
+      "userId": "test3",
+      "amount": 173073,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-04-13",
+      "memo": ""
+    },
+    {
+      "id": "c80488",
+      "userId": "test3",
+      "amount": 313397,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-04-13",
+      "memo": ""
+    },
+    {
+      "id": "879462",
+      "userId": "test3",
+      "amount": 2108443,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-04-19",
+      "memo": ""
+    },
+    {
+      "id": "0eecd9",
+      "userId": "test3",
+      "amount": 486067,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-04-19",
+      "memo": ""
+    },
+    {
+      "id": "9a6523",
+      "userId": "test3",
+      "amount": 217961,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-04-19",
+      "memo": ""
+    },
+    {
+      "id": "a03333",
+      "userId": "test3",
+      "amount": 49844,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-04-19",
+      "memo": ""
+    },
+    {
+      "id": "33c70d",
+      "userId": "test3",
+      "amount": 3696646,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-04-23",
+      "memo": ""
+    },
+    {
+      "id": "0b94d8",
+      "userId": "test3",
+      "amount": 63425,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-04-23",
+      "memo": ""
+    },
+    {
+      "id": "bd1a4a",
+      "userId": "test3",
+      "amount": 3669990,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-04-30",
+      "memo": ""
+    },
+    {
+      "id": "46b7e1",
+      "userId": "test3",
+      "amount": 427452,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-04-30",
+      "memo": ""
+    },
+    {
+      "id": "edcae3",
+      "userId": "test3",
+      "amount": 972256,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-05-07",
+      "memo": ""
+    },
+    {
+      "id": "af3684",
+      "userId": "test3",
+      "amount": 234593,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-05-07",
+      "memo": ""
+    },
+    {
+      "id": "08f796",
+      "userId": "test3",
+      "amount": 46153,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-05-07",
+      "memo": ""
+    },
+    {
+      "id": "8916bc",
+      "userId": "test3",
+      "amount": 349499,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-05-07",
+      "memo": ""
+    },
+    {
+      "id": "51264d",
+      "userId": "test3",
+      "amount": 853066,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-05-15",
+      "memo": ""
+    },
+    {
+      "id": "d66915",
+      "userId": "test3",
+      "amount": 65332,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-05-15",
+      "memo": ""
+    },
+    {
+      "id": "d10098",
+      "userId": "test3",
+      "amount": 199890,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-05-15",
+      "memo": ""
+    },
+    {
+      "id": "6660bb",
+      "userId": "test3",
+      "amount": 3766667,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-05-22",
+      "memo": ""
+    },
+    {
+      "id": "e597ab",
+      "userId": "test3",
+      "amount": 102346,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-05-22",
+      "memo": ""
+    },
+    {
+      "id": "bbb3fb",
+      "userId": "test3",
+      "amount": 351027,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-05-22",
+      "memo": ""
+    },
+    {
+      "id": "af69fe",
+      "userId": "test3",
+      "amount": 3383323,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-06-01",
+      "memo": ""
+    },
+    {
+      "id": "1b8fdc",
+      "userId": "test3",
+      "amount": 253727,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-06-01",
+      "memo": ""
+    },
+    {
+      "id": "039090",
+      "userId": "test3",
+      "amount": 442922,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-06-01",
+      "memo": ""
+    },
+    {
+      "id": "ede5cd",
+      "userId": "test3",
+      "amount": 1925732,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-06-08",
+      "memo": ""
+    },
+    {
+      "id": "bbc79d",
+      "userId": "test3",
+      "amount": 445542,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-06-08",
+      "memo": ""
+    },
+    {
+      "id": "eef8ab",
+      "userId": "test3",
+      "amount": 1969909,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-06-11",
+      "memo": ""
+    },
+    {
+      "id": "2c6d4b",
+      "userId": "test3",
+      "amount": 403465,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-06-11",
+      "memo": ""
+    },
+    {
+      "id": "7f1d4b",
+      "userId": "test3",
+      "amount": 3190122,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-06-22",
+      "memo": ""
+    },
+    {
+      "id": "0b9821",
+      "userId": "test3",
+      "amount": 208699,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-06-22",
+      "memo": ""
+    },
+    {
+      "id": "cf221a",
+      "userId": "test3",
+      "amount": 25047,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-06-22",
+      "memo": ""
+    },
+    {
+      "id": "cd84ad",
+      "userId": "test3",
+      "amount": 456144,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-06-22",
+      "memo": ""
+    },
+    {
+      "id": "96c2c9",
+      "userId": "test3",
+      "amount": 1562691,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-06-26",
+      "memo": ""
+    },
+    {
+      "id": "9e98f9",
+      "userId": "test3",
+      "amount": 196030,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-06-26",
+      "memo": ""
+    },
+    {
+      "id": "1c7e3f",
+      "userId": "test3",
+      "amount": 2227484,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-07-07",
+      "memo": ""
+    },
+    {
+      "id": "629b9f",
+      "userId": "test3",
+      "amount": 377622,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-07-07",
+      "memo": ""
+    },
+    {
+      "id": "edfc64",
+      "userId": "test3",
+      "amount": 301394,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-07-07",
+      "memo": ""
+    },
+    {
+      "id": "42d871",
+      "userId": "test3",
+      "amount": 280861,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-07-07",
+      "memo": ""
+    },
+    {
+      "id": "aecf2d",
+      "userId": "test3",
+      "amount": 1159086,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-07-14",
+      "memo": ""
+    },
+    {
+      "id": "521a7c",
+      "userId": "test3",
+      "amount": 223085,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-07-14",
+      "memo": ""
+    },
+    {
+      "id": "e0a514",
+      "userId": "test3",
+      "amount": 301072,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-07-14",
+      "memo": ""
+    },
+    {
+      "id": "272ccb",
+      "userId": "test3",
+      "amount": 372078,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-07-14",
+      "memo": ""
+    },
+    {
+      "id": "d6de9a",
+      "userId": "test3",
+      "amount": 3509113,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-07-21",
+      "memo": ""
+    },
+    {
+      "id": "605499",
+      "userId": "test3",
+      "amount": 244972,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-07-21",
+      "memo": ""
+    },
+    {
+      "id": "fdcb90",
+      "userId": "test3",
+      "amount": 58786,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-07-21",
+      "memo": ""
+    },
+    {
+      "id": "3530b8",
+      "userId": "test3",
+      "amount": 1729442,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-07-27",
+      "memo": ""
+    },
+    {
+      "id": "62e954",
+      "userId": "test3",
+      "amount": 137561,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-07-27",
+      "memo": ""
+    },
+    {
+      "id": "193db8",
+      "userId": "test3",
+      "amount": 358106,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-07-27",
+      "memo": ""
+    },
+    {
+      "id": "824b98",
+      "userId": "test3",
+      "amount": 203472,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-07-27",
+      "memo": ""
+    },
+    {
+      "id": "f279cb",
+      "userId": "test3",
+      "amount": 3121433,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-08-02",
+      "memo": ""
+    },
+    {
+      "id": "dc78e9",
+      "userId": "test3",
+      "amount": 233086,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-08-02",
+      "memo": ""
+    },
+    {
+      "id": "c2d2d3",
+      "userId": "test3",
+      "amount": 183429,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-08-02",
+      "memo": ""
+    },
+    {
+      "id": "2751ec",
+      "userId": "test3",
+      "amount": 3747987,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-08-07",
+      "memo": ""
+    },
+    {
+      "id": "cb64ff",
+      "userId": "test3",
+      "amount": 170758,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-08-07",
+      "memo": ""
+    },
+    {
+      "id": "822351",
+      "userId": "test3",
+      "amount": 130868,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-08-07",
+      "memo": ""
+    },
+    {
+      "id": "07af4d",
+      "userId": "test3",
+      "amount": 3825285,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-08-16",
+      "memo": ""
+    },
+    {
+      "id": "48e201",
+      "userId": "test3",
+      "amount": 72681,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-08-16",
+      "memo": ""
+    },
+    {
+      "id": "0e114b",
+      "userId": "test3",
+      "amount": 409606,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-08-16",
+      "memo": ""
+    },
+    {
+      "id": "d4a98c",
+      "userId": "test3",
+      "amount": 1603381,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-08-24",
+      "memo": ""
+    },
+    {
+      "id": "9d572b",
+      "userId": "test3",
+      "amount": 263859,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-08-24",
+      "memo": ""
+    },
+    {
+      "id": "de7a14",
+      "userId": "test3",
+      "amount": 389891,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-08-24",
+      "memo": ""
+    },
+    {
+      "id": "8c0923",
+      "userId": "test3",
+      "amount": 408567,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-08-24",
+      "memo": ""
+    },
+    {
+      "id": "3414ff",
+      "userId": "test3",
+      "amount": 3303121,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-08-29",
+      "memo": ""
+    },
+    {
+      "id": "d5ae82",
+      "userId": "test3",
+      "amount": 446537,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-08-29",
+      "memo": ""
+    },
+    {
+      "id": "c92832",
+      "userId": "test3",
+      "amount": 2042547,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-09-09",
+      "memo": ""
+    },
+    {
+      "id": "208826",
+      "userId": "test3",
+      "amount": 104079,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-09-09",
+      "memo": ""
+    },
+    {
+      "id": "facc99",
+      "userId": "test3",
+      "amount": 17417,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-09-09",
+      "memo": ""
+    },
+    {
+      "id": "3275b2",
+      "userId": "test3",
+      "amount": 1330927,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-09-16",
+      "memo": ""
+    },
+    {
+      "id": "3ccf82",
+      "userId": "test3",
+      "amount": 38587,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-09-16",
+      "memo": ""
+    },
+    {
+      "id": "bdd706",
+      "userId": "test3",
+      "amount": 2025309,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-09-17",
+      "memo": ""
+    },
+    {
+      "id": "92e984",
+      "userId": "test3",
+      "amount": 344427,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-09-17",
+      "memo": ""
+    },
+    {
+      "id": "b0164d",
+      "userId": "test3",
+      "amount": 1230283,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-09-30",
+      "memo": ""
+    },
+    {
+      "id": "f8cdda",
+      "userId": "test3",
+      "amount": 159075,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-09-30",
+      "memo": ""
+    },
+    {
+      "id": "8046a4",
+      "userId": "test3",
+      "amount": 260984,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-09-30",
+      "memo": ""
+    },
+    {
+      "id": "243f17",
+      "userId": "test3",
+      "amount": 188628,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-09-30",
+      "memo": ""
+    },
+    {
+      "id": "af9a70",
+      "userId": "test3",
+      "amount": 1015489,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-10-07",
+      "memo": ""
+    },
+    {
+      "id": "8672ae",
+      "userId": "test3",
+      "amount": 69814,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-10-07",
+      "memo": ""
+    },
+    {
+      "id": "04b9e6",
+      "userId": "test3",
+      "amount": 220086,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-10-07",
+      "memo": ""
+    },
+    {
+      "id": "ea0ef3",
+      "userId": "test3",
+      "amount": 1110723,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-10-09",
+      "memo": ""
+    },
+    {
+      "id": "e3af35",
+      "userId": "test3",
+      "amount": 369898,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-10-09",
+      "memo": ""
+    },
+    {
+      "id": "c3b2fb",
+      "userId": "test3",
+      "amount": 89548,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-10-09",
+      "memo": ""
+    },
+    {
+      "id": "f29b16",
+      "userId": "test3",
+      "amount": 435272,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-10-09",
+      "memo": ""
+    },
+    {
+      "id": "a1ed02",
+      "userId": "test3",
+      "amount": 2074378,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-10-20",
+      "memo": ""
+    },
+    {
+      "id": "d457eb",
+      "userId": "test3",
+      "amount": 72102,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-10-20",
+      "memo": ""
+    },
+    {
+      "id": "7bea41",
+      "userId": "test3",
+      "amount": 2545560,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-10-25",
+      "memo": ""
+    },
+    {
+      "id": "78ad08",
+      "userId": "test3",
+      "amount": 424575,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-10-25",
+      "memo": ""
+    },
+    {
+      "id": "565eef",
+      "userId": "test3",
+      "amount": 128325,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-10-25",
+      "memo": ""
+    },
+    {
+      "id": "f4bcf0",
+      "userId": "test3",
+      "amount": 209427,
+      "type": "expense",
+      "category": "여행",
+      "date": "2025-10-25",
+      "memo": ""
+    },
+    {
+      "id": "be8227",
+      "userId": "test3",
+      "amount": 2656906,
+      "type": "income",
+      "category": "용돈",
+      "date": "2025-10-31",
+      "memo": ""
+    },
+    {
+      "id": "a27438",
+      "userId": "test3",
+      "amount": 234830,
+      "type": "expense",
+      "category": "쇼핑",
+      "date": "2025-10-31",
+      "memo": ""
+    },
+    {
+      "id": "30b75b",
+      "userId": "test3",
+      "amount": 308125,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-10-31",
+      "memo": ""
+    },
+    {
+      "id": "d610bb",
+      "userId": "test3",
+      "amount": 41578,
+      "type": "expense",
+      "category": "문화",
+      "date": "2025-10-31",
+      "memo": ""
+    },
+    {
+      "id": "4e3a9c",
+      "userId": "test3",
+      "amount": 3904159,
+      "type": "income",
+      "category": "월급",
+      "date": "2025-11-07",
+      "memo": ""
+    },
+    {
+      "id": "0f6647",
+      "userId": "test3",
+      "amount": 337950,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-11-07",
+      "memo": ""
+    },
+    {
+      "id": "80c02e",
+      "userId": "test3",
+      "amount": 1910006,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-11-13",
+      "memo": ""
+    },
+    {
+      "id": "a50d9f",
+      "userId": "test3",
+      "amount": 92343,
+      "type": "expense",
+      "category": "교통비",
+      "date": "2025-11-13",
+      "memo": ""
+    },
+    {
+      "id": "80c0d6",
+      "userId": "test3",
+      "amount": 1529026,
+      "type": "income",
+      "category": "부수입",
+      "date": "2025-11-20",
+      "memo": ""
+    },
+    {
+      "id": "5ab73f",
+      "userId": "test3",
+      "amount": 92068,
+      "type": "expense",
+      "category": "식비",
+      "date": "2025-11-20",
+      "memo": ""
     }
   ],
   "incomeCategory": [
@@ -1116,7 +4059,7 @@
       "password": "c61b9341aa068fe237b7cc5fb1277c59d629820fb87bcc3dbf012f8f0d475b11",
       "salt": "a2bc9ba508327ea4caef2b91f285a155",
       "email": "test@naver.com",
-      "name": "양현모",
+      "name": "김도현",
       "birth": "2025-04-03",
       "telecom": "SKT",
       "phone": "01063061140",
@@ -1132,7 +4075,7 @@
       "password": "288ccb1b4a797d6f9603e12f710e06421abb5eb51efb271d8bf6136f801f10be",
       "salt": "17e36d752466fc9b69a7564790888a3a",
       "email": "test@naver.com",
-      "name": "박다빈",
+      "name": "박지우",
       "birth": "2025-04-04",
       "telecom": "SKT",
       "phone": "01063061140",
@@ -1144,11 +4087,11 @@
       }
     },
     {
-      "id": "test",
+      "id": "test1",
       "password": "46f20c3ca72967cf9be8cd24281fb35bb52e1733869c17b2d867dd45af0aff96",
       "salt": "6fc2b85ddc842969ef3b1790156a0560",
       "email": "test@naver.com",
-      "name": "테스트",
+      "name": "이수진",
       "birth": "2025-04-08",
       "telecom": "SKT",
       "phone": "01000000000",
