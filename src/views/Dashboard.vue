@@ -43,7 +43,7 @@
                     !$route.path.includes('income'),
                 }"
               >
-                수입 추이
+                수입 요약
               </RouterLink>
             </li>
             <li>
@@ -57,7 +57,7 @@
                     !$route.path.includes('spending'),
                 }"
               >
-                지출 추이
+                지출 요약
               </RouterLink>
             </li>
           </ul>

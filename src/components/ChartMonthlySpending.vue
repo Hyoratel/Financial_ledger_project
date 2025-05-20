@@ -1,7 +1,7 @@
 <template>
   <!-- 월별 지출 추이 꺾은선 차트 -->
   <div class="bg-white p-6 rounded-xl shadow-md mb-8">
-    <h2 class="text-lg font-bold mb-4">📈 월별 지출 추이</h2>
+    <h2 class="text-lg font-bold mb-4">📈 월별 지출 그래프</h2>
     <Line :data="spendingLineData" :options="lineChartOptions" class="mb-6" />
   </div>
 

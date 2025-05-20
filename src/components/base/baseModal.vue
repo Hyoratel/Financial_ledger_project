@@ -1,6 +1,7 @@
 <template>
-  <div class="overlay">
-    <div class="modal-content">
+  <!-- 바깥 클릭 시 confirm 실행 -->
+  <div class="overlay" @click.self="modal.confirm">
+    <div class="modal-content" @click.stop>
       <header class="modal-header">
         <div class="modal-title">
           <slot name="header"></slot>
@@ -20,14 +21,21 @@
 </template>
 
 <script setup>
-// ESC 키 눌렀을 때 모달 닫기 기능 추가
 import { onMounted, onBeforeUnmount } from 'vue';
+import { useGlobalModalStore } from '@/stores/GlobalModalStore'; // ✅ 경로 확인
 
+const modal = useGlobalModalStore();
 const emit = defineEmits(['close']);
 
+// ESC 또는 Enter 키 이벤트 처리
 function handleKeydown(event) {
   if (event.key === 'Escape') {
     emit('close');
+  }
+
+  // ✅ Enter 키로 confirm 처리
+  if (event.key === 'Enter') {
+    modal.confirm();
   }
 }
 

@@ -1,7 +1,7 @@
 <template>
   <!-- 월별 수입 추이 -->
   <div class="bg-white p-6 rounded-xl shadow-md mb-8">
-    <h2 class="text-lg font-bold mb-4">📈 월별 수입 추이</h2>
+    <h2 class="text-lg font-bold mb-4">📈 월별 수입 그래프</h2>
     <Line v-if="hasData" :data="chartData" :options="chartOptions" />
     <p v-else class="text-gray-500 text-sm">📌 수입 데이터가 없습니다.</p>
   </div>

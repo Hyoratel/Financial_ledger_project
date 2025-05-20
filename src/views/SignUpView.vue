@@ -10,7 +10,7 @@
         class="d-block mt-2 mb-4 text-warning fw-bold"
         style="font-size: 20px"
       >
-        ** 뱅크
+        Moneylog
       </h1>
 
       <div
@@ -227,7 +227,7 @@ const form = ref({
 const agreementLabels = {
   privacy: '개인정보 이용',
   telecom: '통신사 이용약관',
-  bank: '** 뱅크 개인정보보호정책',
+  bank: 'Moneylog 개인정보보호정책',
   authTerms: '인증사 이용약관',
 };
 

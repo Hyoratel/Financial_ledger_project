@@ -14,9 +14,7 @@
     <!-- 오른쪽: 수정/삭제 버튼 -->
     <div class="actions">
       <button class="edit" @click="handleEdit">수정</button>
-      <button class="delete" @click="$emit('delete', transaction.id)">
-        삭제
-      </button>
+      <button class="delete" @click="handleDelete">삭제</button>
     </div>
   </div>
 </template>
@@ -32,6 +30,9 @@ const props = defineProps({
 
 function handleEdit() {
   modal.openForm(props.transaction.date, props.transaction);
+}
+function handleDelete() {
+  modal.openDeleteConfirm(props.transaction.id);
 }
 </script>
 

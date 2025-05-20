@@ -1,6 +1,15 @@
 <script setup>
+import { computed } from 'vue';
+import { useTransactionStore } from '@/stores/transactionStore';
 import MonthlySummary from '@/components/MonthlySummary.vue';
 import RecentTransactionList from '@/components/RecentTransactionList.vue';
+
+// ✅ Pinia 스토어 불러오기
+const store = useTransactionStore();
+
+// ✅ props로 넘겨줄 값들
+const transactions = computed(() => store.transactions);
+const selectedMonth = computed(() => store.selectedMonth);
 </script>
 
 <template>
@@ -11,7 +20,10 @@ import RecentTransactionList from '@/components/RecentTransactionList.vue';
   >
     <!-- ✅ 콘텐츠 영역 -->
     <div class="w-100 p-3 d-flex flex-column gap-1">
-      <MonthlySummary />
+      <MonthlySummary
+        :transactions="transactions"
+        :selectedMonth="selectedMonth"
+      />
       <RecentTransactionList />
     </div>
   </div>

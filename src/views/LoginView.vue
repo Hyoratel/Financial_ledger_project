@@ -68,10 +68,15 @@ const login = async () => {
       >
         <!-- 타이틀 영역 -->
         <h1 class="fw-bold mb-5" style="font-size: 24px; color: burlywood">
-          <span class="d-block" style="font-size: 18px; color: #5e4b3c"
-            >** 뱅크</span
+          <!-- Moneylog: 노란색, 기존보다 크게 -->
+          <span class="d-block" style="font-size: 24px; color: #ffc107"
+            >Moneylog</span
           >
-          <span class="text-warning">24시 간편한 자산관리</span>
+
+          <!-- 자산관리: 원래 Moneylog 스타일 (작고 갈색) -->
+          <span style="font-size: 18px; color: #5e4b3c"
+            >24시 간편한 자산관리</span
+          >
         </h1>
 
         <!-- 로그인 입력 폼 -->

@@ -10,12 +10,12 @@
     >
       <!-- 메인 텍스트 -->
       <div class="text-center mt-auto">
-        <p class="text-warning fw-bold mb-2 fs-3">세상을 바꾸는 금융</p>
+        <p class="text-warning fw-bold mb-2 fs-3">24시 간편한 자산관리</p>
         <div
           class="text-white px-4 py-2 fw-bold rounded mb-4"
           style="background-color: #5e4b3c"
         >
-          <div class="p-2 fs-1">** 뱅크</div>
+          <div class="p-2 fs-1">Moneylog</div>
         </div>
       </div>
 
@@ -27,7 +27,7 @@
       </div>
 
       <!-- 하단 문구 -->
-      <div class="text-center small text-dark fw-semibold mb-auto">
+      <div class="text-center small text-warning fw-semibold mb-auto">
         고객의 행복과 더 나은 세상을 만들어 갑니다.
       </div>
     </div>

@@ -11,7 +11,7 @@
       <!-- 상단 로고 -->
       <div class="d-flex justify-content-between align-items-center mb-4">
         <h3 class="fw-bold text-warning mb-0" style="font-size: 20px">
-          ** 뱅크
+          Moneylog
         </h3>
       </div>
 

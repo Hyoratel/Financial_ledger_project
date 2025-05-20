@@ -1,12 +1,16 @@
 <template>
   <div class="transaction-list">
+    <!-- 거래 내역이 있는 경우 리스트 표시 -->
     <TransactionItem
       v-for="tx in transactions"
       :key="tx.id"
       :transaction="tx"
-      @edit="$emit('edit-transaction', tx)"
-      @delete="handleDelete(tx.id)"
     />
+
+    <!-- 거래 내역이 없을 경우 안내 문구 -->
+    <p v-if="transactions.length === 0" class="empty-message">
+      거래내역이 없습니다.
+    </p>
   </div>
 </template>
 
@@ -36,5 +40,11 @@ const handleDelete = async (id) => {
 .transaction-list {
   display: flex;
   flex-direction: column;
+}
+.empty-message {
+  text-align: center;
+  color: #888;
+  margin: 1rem 0;
+  font-size: 1rem;
 }
 </style>
