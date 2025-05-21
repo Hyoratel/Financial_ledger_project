@@ -1,13 +1,15 @@
 <template>
   <div class="transaction-list">
-    <!-- 거래 내역이 있는 경우 리스트 표시 -->
+    <!-- 거래 내역이 있는 경우: 개별 항목 컴포넌트 반복 출력 -->
     <TransactionItem
       v-for="tx in transactions"
       :key="tx.id"
       :transaction="tx"
+      @edit="$emit('edit-transaction', tx)"
+      @delete="$emit('delete-transaction', tx.id)"
     />
 
-    <!-- 거래 내역이 없을 경우 안내 문구 -->
+    <!-- 거래 내역이 없을 경우 안내 문구 표시 -->
     <p v-if="transactions.length === 0" class="empty-message">
       거래내역이 없습니다.
     </p>
@@ -15,25 +17,19 @@
 </template>
 
 <script setup>
-import { useTransactionStore } from '@/stores/transactionStore';
+// 컴포넌트 임포트
 import TransactionItem from './TransactionItem.vue';
 
-// Props 정의
+// props로 거래 목록을 전달받음
 const props = defineProps({
-  transactions: Array,
+  transactions: {
+    type: Array,
+    required: true,
+  },
 });
 
-// 이벤트 정의 (부모에게 이벤트 전달)
-const emit = defineEmits(['edit-transaction']);
-
-// Pinia 스토어 사용
-const transactionStore = useTransactionStore();
-
-// 삭제 처리
-const handleDelete = async (id) => {
-  await transactionStore.deleteTransaction(id);
-  await transactionStore.fetchTransactions(); // 삭제 후 목록 갱신
-};
+// 부모 컴포넌트로 수정/삭제 이벤트를 전달
+const emit = defineEmits(['edit-transaction', 'delete-transaction']);
 </script>
 
 <style scoped>

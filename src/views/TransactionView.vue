@@ -11,7 +11,7 @@
       <!-- 콘텐츠 영역 (스크롤 허용) -->
       <div class="px-3 py-2 overflow-y-auto" style="height: 100%">
         <div class="main-view">
-          <!-- 보기 모드 토글 버튼 -->
+          <!-- 보기 모드 토글 버튼 (일일 / 월별) -->
           <div class="view-toggle">
             <button
               @click="viewMode = 'daily'"
@@ -27,7 +27,7 @@
             </button>
           </div>
 
-          <!-- 수입/지출/순수입 요약 박스 -->
+          <!-- 수입 / 지출 / 순수입 요약 정보 박스 -->
           <div class="summary-box">
             <div>
               <span class="text-primary"
@@ -44,14 +44,14 @@
             </div>
           </div>
 
-          <!-- 월 이동 버튼 -->
+          <!-- 월 변경 버튼 영역 -->
           <div class="month-navigation">
             <button @click="prevMonth">← 이전 달</button>
             <strong>{{ selectedMonth }}</strong>
             <button @click="nextMonth">다음 달 →</button>
           </div>
 
-          <!-- 거래 리스트 -->
+          <!-- 일일 보기일 경우: 거래 리스트 표시 -->
           <TransactionList
             v-if="viewMode === 'daily'"
             :transactions="transactionsForMonth"
@@ -59,11 +59,12 @@
             @edit-transaction="onEditTransaction"
           />
 
-          <!-- 월별 보기: 캘린더 -->
+          <!-- 월별 보기일 경우: 캘린더 표시 -->
           <CalendarView
             v-if="viewMode === 'monthly'"
             :year="currentYear"
             :month="currentMonth"
+            :transactions="transactionsForMonth"
             @select-day="onSelectDay"
           />
         </div>
@@ -73,68 +74,70 @@
 </template>
 
 <script setup>
-// ✅ Vue API
+// Vue 기능 임포트
 import { ref, computed, onMounted } from 'vue';
 
-// ✅ Pinia Stores
+// Pinia 상태관리 스토어 임포트
 import { useTransactionStore } from '@/stores/transactionStore';
 import { useTransactionModalStore } from '@/stores/TransactionModalStore';
 
-// ✅ Components
+// 컴포넌트 임포트
 import TransactionList from '@/components/TransactionList.vue';
 import CalendarView from '@/views/CalendarView.vue';
 
-// 보기 모드 상태
+// 보기 모드 상태 ('daily' 또는 'monthly')
 const viewMode = ref('daily');
 
-// 현재 연도/월
+// 현재 연도 및 월 상태
 const currentYear = ref(new Date().getFullYear());
-const currentMonth = ref(new Date().getMonth());
+const currentMonth = ref(new Date().getMonth()); // 0~11
 
-// Stores
+// 거래 및 모달 상태 스토어
 const store = useTransactionStore();
 const modal = useTransactionModalStore();
 
-// 거래 불러오기
+// 컴포넌트 마운트 시 거래 데이터 불러오기
 onMounted(() => {
   store.fetchTransactions();
 });
 
-// 'YYYY-MM' 포맷
+// 현재 선택된 월 문자열 (YYYY-MM 형식)
 const selectedMonth = computed(() => {
   const y = currentYear.value;
   const m = (currentMonth.value + 1).toString().padStart(2, '0');
   return `${y}-${m}`;
 });
 
-// 필터된 거래
-const transactions = computed(() => store.transactions);
+// 선택된 월에 해당하는 거래만 필터링
 const transactionsForMonth = computed(() =>
   store.transactions.filter((tx) => tx.date.startsWith(selectedMonth.value))
 );
 
-// 총액 계산
+// 총 수입 계산
 const totalIncome = computed(() =>
   transactionsForMonth.value
     .filter((tx) => tx.type === 'income')
     .reduce((sum, tx) => sum + tx.amount, 0)
 );
 
+// 총 지출 계산
 const totalExpense = computed(() =>
   transactionsForMonth.value
     .filter((tx) => tx.type === 'expense')
     .reduce((sum, tx) => sum + tx.amount, 0)
 );
 
+// 순수입 계산 (수입 - 지출)
 const netIncome = computed(() => totalIncome.value - totalExpense.value);
 
+// 순수입의 양에 따라 텍스트 색상 클래스 적용
 const netIncomeClass = computed(() => {
   if (netIncome.value > 0) return 'text-primary';
   if (netIncome.value < 0) return 'text-danger';
   return '';
 });
 
-// 월 이동
+// 이전 달로 이동
 const prevMonth = () => {
   if (currentMonth.value === 0) {
     currentMonth.value = 11;
@@ -144,6 +147,7 @@ const prevMonth = () => {
   }
 };
 
+// 다음 달로 이동
 const nextMonth = () => {
   if (currentMonth.value === 11) {
     currentMonth.value = 0;
@@ -153,12 +157,12 @@ const nextMonth = () => {
   }
 };
 
-// 날짜 클릭 → 모달 열기
+// 월별 캘린더에서 날짜 클릭 시 거래 추가 모달 열기
 const onSelectDay = (date) => {
   modal.openForm(date);
 };
 
-// 거래 수정 클릭 → 수정 모달 열기
+// 거래 수정 버튼 클릭 시 수정 모달 열기
 const onEditTransaction = (tx) => {
   modal.editTransaction(tx);
 };
@@ -199,7 +203,6 @@ const onEditTransaction = (tx) => {
   background-color: #5e4b3c;
   border-radius: 4px 4px 0 0;
 }
-
 .summary-box {
   background: #ffc107;
   padding: 12px;
@@ -208,7 +211,6 @@ const onEditTransaction = (tx) => {
   font-weight: bold;
   text-align: center;
 }
-
 .month-navigation {
   display: flex;
   justify-content: center;

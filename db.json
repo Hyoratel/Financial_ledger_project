@@ -3970,6 +3970,15 @@
       "category": "식비",
       "date": "2025-11-20",
       "memo": ""
+    },
+    {
+      "id": "de26",
+      "date": "2025-05-21",
+      "type": "expense",
+      "category": "교통비",
+      "amount": 1111,
+      "memo": "",
+      "userId": "test1"
     }
   ],
   "incomeCategory": [

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import axios from 'axios';
 import { useAuthStore } from '@/stores/authStore'; // ✅ 로그인 사용자 정보 사용
 
@@ -11,6 +11,28 @@ export const useTransactionStore = defineStore('transaction', () => {
   // 📂 카테고리 목록 (서버에서 별도 관리)
   const incomeCategory = ref([]);
   const expenseCategory = ref([]);
+
+  // ✅ 현재 선택된 월 (기본값은 오늘 날짜 기준)
+  const selectedMonth = ref(getCurrentMonth());
+
+  // 🔧 오늘 날짜 기준 'YYYY-MM' 형태 문자열 반환 함수
+  function getCurrentMonth() {
+    const now = new Date();
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(
+      2,
+      '0'
+    )}`;
+  }
+
+  // ✅ 선택된 월을 갱신하는 함수
+  function setSelectedMonth(newMonth) {
+    selectedMonth.value = newMonth;
+  }
+
+  // ✅ 선택된 월의 거래만 필터링
+  const filteredTransactionsByMonth = computed(() =>
+    transactions.value.filter((tx) => tx.date.startsWith(selectedMonth.value))
+  );
 
   // ✅ 로그인한 사용자 ID 기준으로 거래 내역 불러오기
   const fetchTransactions = async () => {
@@ -91,6 +113,9 @@ export const useTransactionStore = defineStore('transaction', () => {
     transactions,
     incomeCategory,
     expenseCategory,
+    selectedMonth,
+    setSelectedMonth,
+    filteredTransactionsByMonth,
     fetchTransactions,
     fetchData,
     deleteTransaction,
