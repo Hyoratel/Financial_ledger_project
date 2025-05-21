@@ -18,6 +18,9 @@ export const useTransactionModalStore = defineStore('transactionModal', () => {
     editingTransaction.value = null;
   };
 
+  const editTransaction = (tx) => {
+    openForm(tx.date, tx);
+  };
   // 거래 입력/수정 폼 모달 열기
   const openForm = (date = '', transaction = null) => {
     selectedDate.value = date;
@@ -51,6 +54,7 @@ export const useTransactionModalStore = defineStore('transactionModal', () => {
     editingTransaction,
     confirmDeleteId,
     isConfirmingDelete,
+    editTransaction,
     openList,
     openForm,
     openDeleteConfirm,

@@ -606,15 +606,6 @@
       "memo": ""
     },
     {
-      "id": "07cb7f",
-      "userId": "test1",
-      "amount": 2623537,
-      "type": "income",
-      "category": "월급",
-      "date": "2025-05-07",
-      "memo": ""
-    },
-    {
       "id": "dac10d",
       "userId": "test1",
       "amount": 11701,
@@ -680,9 +671,9 @@
     {
       "id": "bd4d75",
       "userId": "test1",
-      "amount": 418224,
+      "amount": 418000,
       "type": "expense",
-      "category": "문화",
+      "category": "식비",
       "date": "2025-05-22",
       "memo": ""
     },
@@ -3977,6 +3968,15 @@
       "type": "expense",
       "category": "교통비",
       "amount": 1111,
+      "memo": "",
+      "userId": "test1"
+    },
+    {
+      "id": "4e21",
+      "date": "2025-05-21",
+      "type": "expense",
+      "category": "식비",
+      "amount": 22222,
       "memo": "",
       "userId": "test1"
     }
