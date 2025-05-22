@@ -21,9 +21,9 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 import { useTransactionStore } from '@/stores/transactionStore';
+import { useMonthlySummary } from '@/composables/useMonthlySummary'; // ✅ 통합된 로직
 import MonthlySummaryCard from '@/components/MonthlySummaryCard.vue';
 import RecentTransactionList from '@/components/RecentTransactionList.vue';
 
@@ -33,38 +33,16 @@ onMounted(() => {
   store.fetchTransactions();
 });
 
-const transactions = computed(() => store.filteredTransactionsByMonth);
 const selectedMonth = computed(() => store.selectedMonth);
 
-// 총 수입 계산
-const totalIncome = computed(() =>
-  transactions.value
-    .filter((tx) => tx.type === 'income')
-    .reduce((sum, tx) => sum + tx.amount, 0)
-);
+// 현재 월의 거래 내역
+const transactions = computed(() => store.filteredTransactionsByMonth);
 
-// 총 지출 계산
-const totalExpense = computed(() =>
-  transactions.value
-    .filter((tx) => tx.type === 'expense')
-    .reduce((sum, tx) => sum + tx.amount, 0)
-);
+// ✅ 통합된 계산 로직 사용 (수입/지출/순수입/비율/피드백)
+const { totalIncome, totalExpense, netIncome, feedbackComment } =
+  useMonthlySummary(transactions);
 
-// 순수입 계산
-const netIncome = computed(() => totalIncome.value - totalExpense.value);
-
-// 피드백 문구 계산
-const feedbackComment = computed(() => {
-  const ratio = totalIncome.value
-    ? ((totalIncome.value - totalExpense.value) / totalIncome.value) * 100
-    : 0;
-  if (ratio >= 75) return '이번 달은 여유롭네요!';
-  if (ratio >= 50) return '이번 달은 괜찮은 편이에요.';
-  if (ratio >= 25) return '이번 달은 조금 아껴야 해요.';
-  return '이번 달은 적자입니다...!';
-});
-
-// 월 변경 함수
+// ✅ 월 변경 함수
 function changeMonth(offset) {
   const [year, month] = store.selectedMonth.split('-').map(Number);
   const newDate = new Date(year, month - 1 + offset);

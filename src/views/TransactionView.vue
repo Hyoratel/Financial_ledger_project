@@ -61,6 +61,7 @@
 import { ref, computed, onMounted } from 'vue';
 import { useTransactionStore } from '@/stores/transactionStore';
 import { useTransactionModalStore } from '@/stores/TransactionModalStore';
+import { useMonthlySummary } from '@/composables/useMonthlySummary'; // ✅ 추가
 import TransactionList from '@/components/TransactionList.vue';
 import CalendarView from '@/views/CalendarView.vue';
 import MonthlySummaryCard from '@/components/MonthlySummaryCard.vue';
@@ -76,42 +77,18 @@ onMounted(() => {
 
 const selectedMonth = computed(() => store.selectedMonth);
 
-const calendarYear = computed(() => Number(selectedMonth.value.split('-')[0]));
-const calendarMonth = computed(
-  () => Number(selectedMonth.value.split('-')[1]) - 1
-);
-
-const onDeleteTransaction = (id) => {
-  modal.openDeleteConfirm(id);
-};
-
 const transactionsForMonth = computed(() =>
   store.transactions.filter((tx) => tx.date.startsWith(selectedMonth.value))
 );
 
-const totalIncome = computed(() =>
-  transactionsForMonth.value
-    .filter((tx) => tx.type === 'income')
-    .reduce((sum, tx) => sum + tx.amount, 0)
+// ✅ 월별 계산/피드백 로직 통합 composable 사용
+const { totalIncome, totalExpense, netIncome, feedbackComment } =
+  useMonthlySummary(transactionsForMonth);
+
+const calendarYear = computed(() => Number(selectedMonth.value.split('-')[0]));
+const calendarMonth = computed(
+  () => Number(selectedMonth.value.split('-')[1]) - 1
 );
-
-const totalExpense = computed(() =>
-  transactionsForMonth.value
-    .filter((tx) => tx.type === 'expense')
-    .reduce((sum, tx) => sum + tx.amount, 0)
-);
-
-const netIncome = computed(() => totalIncome.value - totalExpense.value);
-
-const feedbackComment = computed(() => {
-  const ratio = totalIncome.value
-    ? ((totalIncome.value - totalExpense.value) / totalIncome.value) * 100
-    : 0;
-  if (ratio >= 75) return '이번 달은 여유롭네요!';
-  if (ratio >= 50) return '이번 달은 괜찮은 편이에요.';
-  if (ratio >= 25) return '이번 달은 조금 아껴야 해요.';
-  return '이번 달은 적자입니다...!';
-});
 
 function changeMonth(offset) {
   const [year, month] = store.selectedMonth.split('-').map(Number);
@@ -122,12 +99,16 @@ function changeMonth(offset) {
   store.setSelectedMonth(newMonth);
 }
 
-const onSelectDay = (date) => {
-  modal.openList(date);
+const onDeleteTransaction = (id) => {
+  modal.openDeleteConfirm(id);
 };
 
 const onEditTransaction = (tx) => {
-  modal.openForm(tx.date, tx); //transaction 포함하여 수정 폼 열기
+  modal.openForm(tx.date, tx);
+};
+
+const onSelectDay = (date) => {
+  modal.openList(date);
 };
 </script>
 

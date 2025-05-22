@@ -78,7 +78,7 @@ const feedbackComment = computed(() => {
   if (ratio >= 75) return '이번 달은 여유롭네요!';
   if (ratio >= 50) return '이번 달은 괜찮은 편이에요.';
   if (ratio >= 25) return '이번 달은 조금 아껴야 해요.';
-  return '이번 달은 적자입니다...!';
+  return '이번 달은 지출이 너무 많아요...!';
 });
 </script>
 

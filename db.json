@@ -3979,6 +3979,42 @@
       "amount": 22222,
       "memo": "",
       "userId": "test1"
+    },
+    {
+      "id": "2fd1",
+      "date": "2025-06-23",
+      "type": "expense",
+      "category": "쇼핑",
+      "amount": 5000000,
+      "memo": "",
+      "userId": "test1"
+    },
+    {
+      "id": "5d92",
+      "date": "2025-07-11",
+      "type": "expense",
+      "category": "쇼핑",
+      "amount": 3500000,
+      "memo": "",
+      "userId": "test1"
+    },
+    {
+      "id": "5624",
+      "date": "2025-07-10",
+      "type": "expense",
+      "category": "여행",
+      "amount": 4000000,
+      "memo": "",
+      "userId": "test1"
+    },
+    {
+      "id": "b2d1",
+      "date": "2025-07-28",
+      "type": "expense",
+      "category": "문화",
+      "amount": 1500000,
+      "memo": "",
+      "userId": "test1"
     }
   ],
   "incomeCategory": [
