@@ -1,3 +1,13 @@
+<!--
+  DefaultLayout.vue
+
+  - 기본 레이아웃 구성
+    (로그인 후 사용되는 내부 페이지 레이아웃에 적용)
+  - 상단 고정 네비게이션 바 제공
+  - 페이지 본문 영역 (RouterView) 표시
+  - 하단 고정 거래 추가 버튼 표시 (홈 / 거래내역 페이지에서만 노출)
+-->
+
 <template>
   <div class="app-container">
     <!-- 상단 고정 네비게이션 바 -->
@@ -8,24 +18,30 @@
             <RouterLink to="/home" :class="navClass('/home')">홈</RouterLink>
           </li>
           <li>
-            <RouterLink to="/transactions" :class="navClass('/transactions')">거래내역</RouterLink>
+            <RouterLink to="/transactions" :class="navClass('/transactions')"
+              >거래내역</RouterLink
+            >
           </li>
           <li>
-            <RouterLink to="/dashboard" :class="navClass('/dashboard')">통계</RouterLink>
+            <RouterLink to="/dashboard" :class="navClass('/dashboard')"
+              >통계</RouterLink
+            >
           </li>
           <li>
-            <RouterLink to="/profile" :class="navClass('/profile')">설정</RouterLink>
+            <RouterLink to="/profile" :class="navClass('/profile')"
+              >설정</RouterLink
+            >
           </li>
         </ul>
       </nav>
     </header>
 
-    <!-- 본문 -->
+    <!-- 페이지 본문 영역 -->
     <main class="main-content p-6">
       <RouterView />
     </main>
 
-    <!-- 하단 고정 거래 추가 버튼 -->
+    <!-- 하단 고정 거래 추가 버튼 (홈 / 거래내역 페이지에서만 노출) -->
     <button v-if="showAddButton" class="fab" @click="modal.openForm()">
       +
     </button>
@@ -38,18 +54,23 @@ import { useTransactionModalStore } from '@/stores/TransactionModalStore';
 import { useRoute } from 'vue-router';
 import { computed } from 'vue';
 
+// 스토어 및 라우트 초기화
 const modal = useTransactionModalStore();
 const transactionStore = useTransactionStore();
 const route = useRoute();
 
+// 현재 활성화된 네비게이션 링크 여부 판단
 const navClass = (path) => {
   return {
     'active-link': route.path.startsWith(path),
   };
 };
 
+// 거래 추가 버튼 노출 여부 판단
 const showAddButton = computed(() => {
-  return route.path.startsWith('/home') || route.path.startsWith('/transactions');
+  return (
+    route.path.startsWith('/home') || route.path.startsWith('/transactions')
+  );
 });
 </script>
 
@@ -110,23 +131,24 @@ const showAddButton = computed(() => {
   padding: 70px 16px 16px;
 }
 
-/* + 버튼 스타일 */
+/* 거래 추가 버튼 스타일 (FAB) */
 .fab {
   position: fixed;
-  bottom: 20px; /* 🔥 화면 하단 기준 20px 위 (지금보다 더 내림) */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 48px;
+  width: 48px; /* 원 크기: 작고 단정한 크기 */
   height: 48px;
-  background-color: #5e4b3c;
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
+  background-color: #60584c;
+  color: #daa520;
+  font-size: 24px; /* + 기호 적당한 크기 */
   border: none;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   z-index: 50;
+
+  /* 수직/수평 정렬 */
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,3 +1,12 @@
+<!--
+ProfileView.vue
+프로필 설정 화면 구성 컴포넌트
+- 로그인한 사용자 정보(이름, 이메일, 휴대폰번호, 생년월일, 통신사) 수정 가능
+- 정보 저장 기능 제공
+- 로그아웃 / 회원 탈퇴 기능 제공
+- 비로그인 시 로그인 유도 메시지 표시
+-->
+
 <template>
   <!-- 전체 화면 중앙 정렬 및 배경 설정 -->
   <div
@@ -90,8 +99,10 @@
 <script setup>
 // 인증 스토어 import (로그인 사용자 정보 및 관련 메서드 접근)
 import { useAuthStore } from '../stores/authStore';
+
 // 페이지 이동을 위한 Vue Router 사용
 import { useRouter } from 'vue-router';
+
 // 반응형 객체 생성을 위한 reactive import
 import { reactive } from 'vue';
 

@@ -1,9 +1,12 @@
-// src/composables/useMonthlySummary.js
+// 월별 거래 데이터를 받아 총 수입/총 지출/순수입/수입 대비 비율/피드백 문구를 계산하는 composable
+// 거래 입력 및 월별 요약 기능에서 재사용 가능
+
 import { computed } from 'vue';
 
 /**
- * 월별 거래 데이터를 받아 수입/지출/순수입/비율/피드백 계산
+ * useMonthlySummary
  * @param {Ref<Array>} transactionsRef - 월별 필터링된 거래 데이터
+ * @returns {Object} { totalIncome, totalExpense, netIncome, balanceRatio, feedbackComment }
  */
 export function useMonthlySummary(transactionsRef) {
   // 총 수입 계산
@@ -23,7 +26,7 @@ export function useMonthlySummary(transactionsRef) {
   // 순수입 계산
   const netIncome = computed(() => totalIncome.value - totalExpense.value);
 
-  // 수입 대비 순수입 비율 계산
+  // 수입 대비 순수입 비율 계산 (퍼센트 단위, 0~100)
   const balanceRatio = computed(() =>
     totalIncome.value === 0
       ? 0

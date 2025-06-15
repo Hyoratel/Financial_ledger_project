@@ -1,18 +1,30 @@
+<!--
+  BaseModal.vue
+
+  - 거래내역 삭제 확인, 거래 입력/수정 등 전역 confirm 모달로 사용됨
+  - GlobalModalStore 를 통해 전역 상태 및 confirmCallback 관리
+  - ESC 키 / Enter 키 입력 처리 지원
+-->
 <template>
-  <!-- 바깥 클릭 시 confirm 실행 -->
+  <!-- Overlay 영역 클릭 시 confirm() 실행 -->
   <div class="overlay" @click.self="modal.confirm">
+    <!-- Modal Content: 내부 클릭 시 이벤트 전파 방지 -->
     <div class="modal-content" @click.stop>
+      <!-- Modal Header -->
       <header class="modal-header">
         <div class="modal-title">
           <slot name="header"></slot>
         </div>
+        <!-- 닫기 버튼 클릭 시 close 이벤트 emit -->
         <button class="close-btn" @click="$emit('close')">&times;</button>
       </header>
 
+      <!-- Modal Body -->
       <section class="modal-body">
         <slot name="body"></slot>
       </section>
 
+      <!-- Modal Footer -->
       <footer class="modal-footer">
         <slot name="footer"></slot>
       </footer>
@@ -22,18 +34,16 @@
 
 <script setup>
 import { onMounted, onBeforeUnmount } from 'vue';
-import { useGlobalModalStore } from '@/stores/GlobalModalStore'; // ✅ 경로 확인
+import { useGlobalModalStore } from '@/stores/GlobalModalStore';
 
 const modal = useGlobalModalStore();
 const emit = defineEmits(['close']);
 
-// ESC 또는 Enter 키 이벤트 처리
+// 키보드 입력 핸들링
 function handleKeydown(event) {
   if (event.key === 'Escape') {
     emit('close');
   }
-
-  // ✅ Enter 키로 confirm 처리
   if (event.key === 'Enter') {
     modal.confirm();
   }
@@ -75,7 +85,7 @@ onBeforeUnmount(() => {
 }
 
 .modal-header {
-  background-color: #5e4b3c;
+  background-color: #60584c;
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -109,7 +119,7 @@ onBeforeUnmount(() => {
 
 .modal-footer button {
   padding: 8px 16px;
-  background-color: #5e4b3c;
+  background-color: #60584c;
   color: white;
   border: none;
   border-radius: 6px;
@@ -121,7 +131,7 @@ onBeforeUnmount(() => {
 .modal-footer button:hover {
   background-color: #4b3a2b;
 }
-
+/* 애니메이션 */
 @keyframes fadeIn {
   from {
     opacity: 0;

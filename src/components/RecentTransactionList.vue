@@ -1,3 +1,11 @@
+<!--
+  RecentTransactionList.vue
+
+  - 최근 거래 내역 7건을 카드형 박스로 표시
+  - 하단 '거래내역 더보기' 버튼으로 이동
+  - 거래내역(TransactionList)와 연결 가능 / 홈 대시보드 영역에서 사용 가능
+-->
+
 <template>
   <!-- 최근 거래 내역 박스 -->
   <div class="section-box">
@@ -32,6 +40,7 @@
 import { computed } from 'vue';
 import { useRouter } from 'vue-router';
 
+// props 정의
 const props = defineProps({
   transactions: {
     type: Array,
@@ -41,18 +50,19 @@ const props = defineProps({
 
 const router = useRouter();
 
+// 거래내역 페이지로 이동
 const goToTransactions = () => {
   router.push('/transactions');
 };
 
-// 최근 거래 7건 추출
+// 최근 거래 7건 추출 (최신순 정렬 후 상위 7건)
 const recentTransactions = computed(() =>
   [...props.transactions]
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 7)
 );
 
-// 날짜 포맷
+// 날짜 포맷 함수 (MM월 DD일)
 const formatDate = (dateStr) => {
   const date = new Date(dateStr);
   return `${date.getMonth() + 1}월 ${date.getDate()}일`;
@@ -109,6 +119,6 @@ const formatDate = (dateStr) => {
   text-decoration: underline;
 }
 .more-button button:hover {
-  color: #5e4b3c;
+  color: #60584c;
 }
 </style>

@@ -1,8 +1,23 @@
+<!--
+LoginView.vue
+로그인 화면 구성 컴포넌트
+- 아이디/비밀번호 입력 폼
+- 유효성 검사 및 오류 메시지 표시
+- 로그인 성공 시 글로벌 모달 표시 후 홈 화면으로 이동
+- 로그인 실패 시 글로벌 모달로 오류 알림
+- 회원가입 페이지로 이동하는 링크 제공
+-->
+
 <script setup>
+// Vue 기능 import
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+
+// Pinia 스토어 import
 import { useAuthStore } from '../stores/authStore';
 import { useGlobalModalStore } from '../stores/GlobalModalStore';
+
+import moneylogo from '@/assets/images/moneylogo.png';
 
 // 입력값과 오류 메시지 상태 정의
 const username = ref('');
@@ -12,6 +27,7 @@ const errors = ref({
   password: '',
 });
 
+// Router, Store 사용
 const router = useRouter();
 const authStore = useAuthStore();
 const globalModal = useGlobalModalStore();
@@ -40,6 +56,7 @@ const login = async () => {
   const success = await authStore.login(username.value, password.value);
 
   if (success) {
+    // 로그인 성공 시 모달 표시 후 홈으로 이동
     globalModal.openAlert({
       title: '로그인 성공',
       message: `${authStore.user.name}님, 환영합니다.`,
@@ -48,6 +65,7 @@ const login = async () => {
       },
     });
   } else {
+    // 로그인 실패 시 모달 표시
     globalModal.openAlert({
       title: '로그인 실패',
       message: '아이디 또는 비밀번호가 일치하지 않습니다.',
@@ -57,6 +75,7 @@ const login = async () => {
 </script>
 
 <template>
+  <!-- 전체 뷰포트 영역 가운데 정렬 -->
   <div
     class="d-flex justify-content-center align-items-center min-vh-100 bg-white"
   >
@@ -67,15 +86,23 @@ const login = async () => {
       <div
         class="d-flex flex-column justify-content-center align-items-center flex-grow-1 px-4"
       >
-        <!-- 타이틀 -->
-        <h1 class="fw-bold mb-5" style="font-size: 24px; color: burlywood">
-          <span class="d-block" style="font-size: 24px; color: #ffc107"
-            >Moneylog</span
-          >
-          <span style="font-size: 18px; color: #5e4b3c"
-            >24시 간편한 자산관리</span
-          >
-        </h1>
+        <!-- 로고 및 슬로건 영역 -->
+        <div class="text-center my-5">
+          <!-- 로고 이미지 -->
+          <div class="mb-3">
+            <img
+              :src="moneylogo"
+              alt="Moneylog 로고"
+              class="img-fluid"
+              style="max-width: 220px; width: 100%"
+            />
+          </div>
+
+          <!-- 슬로건 텍스트 -->
+          <p class="fw-semibold" style="font-size: 16px; color: #808080">
+            24시 간편한 자산관리
+          </p>
+        </div>
 
         <!-- 로그인 폼 -->
         <form class="w-100" @submit.prevent="login">
@@ -109,7 +136,7 @@ const login = async () => {
           <button
             type="submit"
             class="btn text-warning fw-bold w-100 mb-2"
-            style="background-color: #5e4b3c"
+            style="background-color: #60584c"
           >
             로그인
           </button>

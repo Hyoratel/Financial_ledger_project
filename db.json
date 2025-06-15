@@ -275,9 +275,9 @@
     {
       "id": "70c016",
       "userId": "test1",
-      "amount": 2394364,
+      "amount": 2394000,
       "type": "income",
-      "category": "용돈",
+      "category": "월급",
       "date": "2025-02-06",
       "memo": ""
     },

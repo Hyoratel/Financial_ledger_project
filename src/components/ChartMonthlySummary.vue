@@ -1,3 +1,11 @@
+<!--
+  ChartMonthlySummary.vue
+
+  - 로그인한 사용자의 월별 수입/지출/순이익 요약을 Bar + Line 혼합 차트로 시각화
+  - TransactionStore, AuthStore 사용
+  - Chart.js + vue-chartjs 이용
+-->
+
 <template>
   <div class="bg-white p-6 rounded-xl shadow-md">
     <h2 class="text-lg font-bold mb-4">📊 월별 요약</h2>
@@ -6,7 +14,6 @@
 </template>
 
 <script setup>
-// 외부 라이브러리 및 스토어 불러오기
 import { computed, onMounted } from 'vue';
 import { useTransactionStore } from '@/stores/transactionStore';
 import { useAuthStore } from '@/stores/authStore';
@@ -23,7 +30,7 @@ import {
 } from 'chart.js';
 import { Chart } from 'vue-chartjs';
 
-// Chart.js 구성요소 등록 (Bar + Line 혼합 차트 사용)
+// Chart.js 구성 요소 등록 (Bar + Line 혼합 차트 사용)
 ChartJS.register(
   BarElement,
   LineElement,
@@ -35,21 +42,21 @@ ChartJS.register(
   PointElement
 );
 
-// 사용자 거래 데이터 로드
+// 스토어 사용
 const store = useTransactionStore();
 const authStore = useAuthStore();
 
-// 컴포넌트 마운트 시 거래 데이터 로딩
+// 거래 데이터 불러오기
 onMounted(() => {
-  store.fetchTransactions(); // 이미 userId 기반 요청이면 그대로 사용 가능
+  store.fetchTransactions();
 });
 
-// 로그인한 사용자 거래만 필터링
+// 로그인한 사용자의 거래 내역 필터링
 const userTransactions = computed(() =>
   store.transactions.filter((tx) => tx.userId === authStore.user.id)
 );
 
-// 월별 수입/지출/순이익 요약 계산
+// 월별 수입/지출/순이익 요약 데이터 계산
 const summaryByMonth = computed(() => {
   const summary = {};
 
@@ -65,7 +72,7 @@ const summaryByMonth = computed(() => {
   return summary;
 });
 
-// 차트 데이터 구성 - 막대: 수입/지출, 꺾은선: 순이익
+// 차트 데이터 구성 (Bar: 수입/지출, Line: 순이익)
 const chartData = computed(() => {
   const labels = Object.keys(summaryByMonth.value).sort();
   const incomeData = labels.map((label) => summaryByMonth.value[label].income);

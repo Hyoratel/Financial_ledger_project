@@ -1,3 +1,12 @@
+<!--
+TermsAgreementView.vue
+회원가입 단계에서 약관 동의 화면 구성
+- 약관 전체 동의 및 개별 동의 체크박스 제공
+- 필수 약관이 모두 동의되어야 '다음' 버튼 활성화
+- 선택 약관은 동의 여부 무관
+- 약관 내용은 별도 JSON 파일에서 동적 로딩
+-->
+
 <template>
   <!-- 화면 전체를 중앙 정렬 -->
   <div
@@ -54,7 +63,7 @@
           {{ term.title }}
         </label>
 
-        <!-- 약관 내용 미리보기 (스크롤이 필요한 경우만) -->
+        <!-- 약관 내용 미리보기 (스크롤이 필요한 경우만 표시) -->
         <textarea
           v-if="term.scroll"
           class="form-control mt-2"
@@ -64,20 +73,21 @@
         >
       </div>
 
-      <!-- 다음 버튼: 필수 약관을 모두 체크한 경우 활성화 -->
+      <!-- 다음 버튼: 필수 약관 모두 체크 시 활성화 -->
       <router-link
         v-if="canProceed"
         to="/signup"
         class="btn w-100 mt-4 text-warning fw-bold"
-        style="background-color: #5e4b3c"
+        style="background-color: #60584c"
       >
         다음
       </router-link>
+
       <!-- 체크 미완료 시 비활성 버튼 -->
       <button
         v-else
         class="btn w-100 mt-4 text-white fw-bold"
-        style="background-color: #5e4b3c"
+        style="background-color: #60584c"
         disabled
       >
         다음
@@ -95,7 +105,7 @@ export default {
     };
   },
   computed: {
-    // 필수 항목들이 모두 체크되어야 다음으로 진행 가능
+    // 필수 약관 항목이 모두 체크되었는지 여부
     canProceed() {
       return this.terms
         .filter((term) => term.required) // 필수 항목만 필터링
@@ -103,19 +113,19 @@ export default {
     },
   },
   methods: {
-    // 전체 동의 체크 시 개별 항목들도 모두 선택
+    // 전체 동의 토글 시 개별 항목 체크 상태 일괄 반영
     toggleAll() {
       this.terms.forEach((term) => {
         term.checked = this.allChecked;
       });
     },
 
-    // 개별 항목 체크 시 전체 동의 상태 자동 갱신
+    // 개별 항목 체크 시 전체 동의 상태 동기화
     syncAllCheck() {
       this.allChecked = this.terms.every((term) => term.checked);
     },
 
-    // 약관 내용 불러오기 (스크롤 가능한 항목만)
+    // 약관 내용 로드 (scroll 표시가 필요한 항목만 처리)
     async loadTermContents() {
       for (const term of this.terms) {
         if (term.scroll && term.contentUrl) {
@@ -130,11 +140,11 @@ export default {
     },
   },
   async mounted() {
-    // 컴포넌트가 마운트될 때 약관 json 파일 로딩
+    // 컴포넌트 마운트 시 약관 json 파일 로드
     try {
       const res = await fetch('/terms.json');
       this.terms = await res.json();
-      await this.loadTermContents(); // 약관 내용 동기 로딩
+      await this.loadTermContents(); // 약관 내용 동기 로드
     } catch (error) {
       console.error('약관 데이터를 불러오는 중 오류:', error);
     }
@@ -143,6 +153,7 @@ export default {
 </script>
 
 <style scoped>
+/* 약관 내용 textarea 스타일 */
 textarea {
   transition: opacity 0.2s ease-in-out;
   white-space: pre-wrap; /* 줄바꿈 보이게 */

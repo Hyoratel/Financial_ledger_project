@@ -1,3 +1,13 @@
+<!--
+TransactionForm.vue
+거래 입력/수정 폼 컴포넌트
+- 신규 거래 등록 또는 기존 거래 수정 지원
+- 날짜, 수입/지출 유형, 카테고리, 금액, 메모 입력 가능
+- 유효성 검사 후 거래 저장 처리
+- 카테고리 선택은 SelectCategory 컴포넌트 사용
+- 저장 완료 시 'completed' 이벤트 발생 (부모 컴포넌트에서 모달 닫기 등 처리)
+-->
+
 <template>
   <!-- 거래 입력/수정 폼 -->
   <form
@@ -46,34 +56,34 @@
 </template>
 
 <script setup>
-// 🔹 vue 기본 기능 가져오기
+// Vue 기본 기능 가져오기
 import { ref, computed, watch } from 'vue';
 
-// 🔹 Pinia store 가져오기
+// Pinia store 가져오기
 import { useTransactionStore } from '@/stores/transactionStore';
 import { useAuthStore } from '@/stores/authStore';
 import { useCategoryStore } from '@/stores/categoryStore';
 import { useTransactionModalStore } from '@/stores/TransactionModalStore';
 
-// 🔹 카테고리 선택 컴포넌트 가져오기
+// 카테고리 선택 컴포넌트 가져오기
 import SelectCategory from '@/components/SelectCategory.vue';
 
-// 🔹 부모 컴포넌트로부터 받는 props 정의
+// 부모 컴포넌트로부터 props 정의
 const props = defineProps({
   transaction: Object, // 수정할 거래 정보 (optional)
   date: String, // 기본 날짜 값 (optional)
 });
 
-// 🔹 완료 이벤트 emit
+// 완료 이벤트 emit
 const emit = defineEmits(['completed']);
 
-// 🔹 필요한 스토어 초기화
+// 필요한 스토어 초기화
 const transactionStore = useTransactionStore();
 const categoryStore = useCategoryStore();
 const authStore = useAuthStore();
 const modal = useTransactionModalStore();
 
-// 🔹 입력폼 데이터 관리
+// 입력폼 데이터 관리
 const form = ref({
   date: props.date || '', // 기본 날짜
   type: 'expense', // 기본 유형: 지출
@@ -82,7 +92,7 @@ const form = ref({
   memo: '',
 });
 
-// 🔹 입력폼 에러 메시지 관리
+// 입력폼 에러 메시지 관리
 const errors = ref({
   date: '',
   type: '',
@@ -90,10 +100,10 @@ const errors = ref({
   amount: '',
 });
 
-// 🔹 수정 모드 여부 판별
+// 수정 모드 여부 판별
 const isEditMode = computed(() => !!props.transaction);
 
-// 🔹 거래 수정모드일 경우, 기존 거래 데이터로 폼 초기화
+// 거래 수정모드일 경우, 기존 거래 데이터로 폼 초기화
 watch(
   () => props.transaction,
   (tx) => {
@@ -116,7 +126,7 @@ watch(
   { immediate: true } // 최초에도 반영되게 설정
 );
 
-// 🔹 유형(type) 변경 시, 해당 유형에 맞는 카테고리 새로 불러오기
+// 유형(type) 변경 시 해당 유형에 맞는 카테고리 새로 불러오기
 watch(
   () => form.value.type,
   (newType) => {
@@ -129,13 +139,13 @@ watch(
   { immediate: true }
 );
 
-// 🔹 금액 입력 시 숫자만 허용
+// 금액 입력 시 숫자만 허용
 const validateAmount = (e) => {
   const val = e.target.value.replace(/[^0-9]/g, ''); // 숫자만 남김
   form.value.amount = val;
 };
 
-// 🔹 거래 저장 처리
+// 거래 저장 처리
 const handleSubmit = async () => {
   // 모든 에러 초기화
   errors.value = {
@@ -147,7 +157,7 @@ const handleSubmit = async () => {
 
   let isValid = true; // 기본적으로 유효성 true로 시작
 
-  // 🔹 유효성 체크
+  // 유효성 체크
   if (!form.value.date) {
     errors.value.date = '날짜를 입력해주세요.';
     isValid = false;
@@ -165,17 +175,17 @@ const handleSubmit = async () => {
     isValid = false;
   }
 
-  // 🔹 유효성 실패 시 중단
+  // 유효성 실패 시 중단
   if (!isValid) return;
 
-  // 🔹 서버에 보낼 최종 데이터 구성
+  // 서버에 보낼 최종 데이터 구성
   const payload = {
     ...form.value,
     userId: authStore.user.id, // 로그인 사용자 ID 추가
     amount: parseInt(form.value.amount), // 금액은 숫자 타입으로 변환
   };
 
-  // 🔹 수정모드/등록모드 구분
+  // 수정모드 / 등록모드 구분
   if (isEditMode.value) {
     await transactionStore.updateTransaction(payload);
   } else {
@@ -188,26 +198,26 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
-/* 🔹 폼 레이아웃 스타일 */
+/* 폼 레이아웃 스타일 */
 .transaction-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* 🔹 카테고리 선택 영역 스타일 */
+/* 카테고리 선택 영역 스타일 */
 .category-section {
   padding: 0.5rem 0;
 }
 
-/* 🔹 선택된 카테고리 표시 텍스트 스타일 */
+/* 선택된 카테고리 표시 텍스트 스타일 */
 .selected-category {
   font-size: 0.9rem;
   color: #444;
   margin-top: 5px;
 }
 
-/* 🔹 input, select 공통 스타일 */
+/* input, select 공통 스타일 */
 input,
 select {
   padding: 6px;
@@ -215,7 +225,7 @@ select {
   border-radius: 4px;
 }
 
-/* 🔹 에러 문구 스타일 */
+/* 에러 문구 스타일 */
 .error {
   color: #dc3545; /* 빨간색 */
   font-size: 0.8rem;

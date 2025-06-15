@@ -1,4 +1,11 @@
-<!-- 📁 components/SelectCategory.vue -->
+<!--
+  SelectCategory.vue
+
+  - 현재 선택된 수입/지출 타입에 따라 카테고리 리스트 표시
+  - 클릭 시 선택된 카테고리를 부모로 emit('select', category) 이벤트 전달
+  - 거래 입력 폼(TransactionForm) 등에서 카테고리 선택용으로 사용
+-->
+
 <template>
   <div class="select-category">
     <ul class="category-list">
@@ -30,7 +37,7 @@ const categories = computed(() =>
     : categoryStore.expenseCategory
 );
 
-// 선택 이벤트 처리
+// 카테고리 선택 시 처리
 const handleSelect = (category) => {
   selectedCategory.value = category;
   emit('select', category); // 부모로 전달

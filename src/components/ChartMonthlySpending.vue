@@ -1,3 +1,11 @@
+<!--
+  ChartMonthlySpending.vue
+
+  - 로그인한 사용자의 월별 지출 추이(Line 차트) 및 카테고리별 지출 분포(Doughnut 차트)를 시각화
+  - TransactionStore, AuthStore 사용
+  - Chart.js + vue-chartjs 이용
+-->
+
 <template>
   <!-- 월별 지출 추이 꺾은선 차트 -->
   <div class="bg-white p-6 rounded-xl shadow-md mb-8">
@@ -20,7 +28,6 @@
 </template>
 
 <script setup>
-// 모듈 및 라이브러리 등록
 import { ref, computed, onMounted } from 'vue';
 import { useTransactionStore } from '@/stores/transactionStore';
 import { useAuthStore } from '@/stores/authStore';
@@ -37,7 +44,7 @@ import {
   ArcElement,
 } from 'chart.js';
 
-// 차트 구성요소 등록
+// Chart.js 구성 요소 등록
 ChartJS.register(
   Title,
   Tooltip,
@@ -49,21 +56,21 @@ ChartJS.register(
   ArcElement
 );
 
-// 스토어 및 데이터 로드
+// 스토어 사용
 const store = useTransactionStore();
 const authStore = useAuthStore();
 
-// 컴포넌트 마운트 시 거래 내역 불러오기
+// 거래 데이터 불러오기
 onMounted(() => {
-  store.fetchTransactions(); // 로그인한 사용자 거래만 가져오도록 이미 수정돼 있음
+  store.fetchTransactions();
 });
 
-// 로그인한 사용자의 거래만 필터링
+// 로그인한 사용자의 거래 내역 필터링
 const userTransactions = computed(() =>
   store.transactions.filter((tx) => tx.userId === authStore.user.id)
 );
 
-// 월별 지출 추이 계산
+// 월별 지출 데이터 계산
 const monthlySpending = computed(() => {
   const result = {};
   userTransactions.value.forEach((t) => {
@@ -75,7 +82,7 @@ const monthlySpending = computed(() => {
   return result;
 });
 
-// 카테고리별 지출 계산
+// 카테고리별 지출 데이터 계산
 const categorySpending = computed(() => {
   const result = {};
   userTransactions.value.forEach((t) => {
@@ -87,12 +94,12 @@ const categorySpending = computed(() => {
   return result;
 });
 
-// 카테고리 데이터 유무 판단
+// 카테고리 데이터 존재 여부 판단
 const hasCategoryData = computed(
   () => Object.keys(categorySpending.value).length > 0
 );
 
-// 월별 꺾은선 차트 데이터
+// 월별 꺾은선 차트 데이터 구성
 const spendingLineData = computed(() => {
   const labels = Object.keys(monthlySpending.value).sort();
   const values = labels.map((label) => monthlySpending.value[label]);
@@ -111,7 +118,7 @@ const spendingLineData = computed(() => {
   };
 });
 
-// 꺾은선 차트 옵션
+// 꺾은선 차트 옵션 설정
 const lineChartOptions = {
   responsive: true,
   plugins: {

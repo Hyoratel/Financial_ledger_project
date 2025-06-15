@@ -1,3 +1,12 @@
+<!--
+  TransactionList.vue
+
+  - 거래 목록(배열)을 받아서 TransactionItem 컴포넌트로 렌더링
+  - 거래 내역이 없으면 안내 문구 표시
+  - edit-transaction / delete-transaction 이벤트를 부모로 emit
+  - 거래내역 화면(TransactionView 등)에서 사용
+-->
+
 <template>
   <div class="transaction-list">
     <!-- 거래 내역이 있는 경우: 개별 항목 컴포넌트 반복 출력 -->
@@ -20,7 +29,7 @@
 // 컴포넌트 임포트
 import TransactionItem from './TransactionItem.vue';
 
-// props로 거래 목록을 전달받음
+// props 정의 (거래 목록 전달받음)
 const props = defineProps({
   transactions: {
     type: Array,
@@ -28,7 +37,7 @@ const props = defineProps({
   },
 });
 
-// 부모 컴포넌트로 수정/삭제 이벤트를 전달
+// emit 정의 (수정/삭제 이벤트 전달)
 const emit = defineEmits(['edit-transaction', 'delete-transaction']);
 </script>
 

@@ -1,3 +1,13 @@
+<!--
+  TransactionView.vue
+
+  - 거래 내역 화면 (일일/월별 보기 지원)
+  - 상단 MonthlySummaryCard 에 월별 총 수입/총 지출/순수입/피드백 표시
+  - 보기 모드 (일일/월별) 토글 가능
+  - 거래 리스트(TransactionList) 또는 캘린더(CalendarView) 표시
+  - 월별 요약 데이터는 useMonthlySummary composable 에서 계산
+-->
+
 <template>
   <div
     class="d-flex justify-content-center align-items-center heigt-100 bg-white"
@@ -61,35 +71,42 @@
 import { ref, computed, onMounted } from 'vue';
 import { useTransactionStore } from '@/stores/transactionStore';
 import { useTransactionModalStore } from '@/stores/TransactionModalStore';
-import { useMonthlySummary } from '@/composables/useMonthlySummary'; // ✅ 추가
+import { useMonthlySummary } from '@/composables/useMonthlySummary';
 import TransactionList from '@/components/TransactionList.vue';
 import CalendarView from '@/views/CalendarView.vue';
 import MonthlySummaryCard from '@/components/MonthlySummaryCard.vue';
 
+// 보기 모드 (일일 / 월별) 상태
 const viewMode = ref('daily');
 
+// 스토어 사용
 const store = useTransactionStore();
 const modal = useTransactionModalStore();
 
+// 거래 데이터 로드
 onMounted(() => {
   store.fetchTransactions();
 });
 
+// 선택된 월 (YYYY-MM 형식)
 const selectedMonth = computed(() => store.selectedMonth);
 
+// 선택된 월의 거래 내역 필터링
 const transactionsForMonth = computed(() =>
   store.transactions.filter((tx) => tx.date.startsWith(selectedMonth.value))
 );
 
-// ✅ 월별 계산/피드백 로직 통합 composable 사용
+// 월별 계산/피드백 데이터 (useMonthlySummary 사용)
 const { totalIncome, totalExpense, netIncome, feedbackComment } =
   useMonthlySummary(transactionsForMonth);
 
+// 캘린더 표시용 연/월 계산
 const calendarYear = computed(() => Number(selectedMonth.value.split('-')[0]));
 const calendarMonth = computed(
   () => Number(selectedMonth.value.split('-')[1]) - 1
 );
 
+// 월 변경 처리
 function changeMonth(offset) {
   const [year, month] = store.selectedMonth.split('-').map(Number);
   const newDate = new Date(year, month - 1 + offset);
@@ -99,14 +116,17 @@ function changeMonth(offset) {
   store.setSelectedMonth(newMonth);
 }
 
+// 거래 삭제 처리
 const onDeleteTransaction = (id) => {
   modal.openDeleteConfirm(id);
 };
 
+// 거래 수정 처리
 const onEditTransaction = (tx) => {
   modal.openForm(tx.date, tx);
 };
 
+// 캘린더 날짜 클릭 시 처리
 const onSelectDay = (date) => {
   modal.openList(date);
 };
@@ -134,7 +154,7 @@ const onSelectDay = (date) => {
 }
 .view-toggle button.active {
   background-color: white;
-  color: #5e4b3c;
+  color: #60584c;
   font-weight: bold;
 }
 .view-toggle button.active::after {
@@ -144,7 +164,7 @@ const onSelectDay = (date) => {
   left: 0;
   right: 0;
   height: 4px;
-  background-color: #5e4b3c;
+  background-color: #60584c;
   border-radius: 4px 4px 0 0;
 }
 </style>

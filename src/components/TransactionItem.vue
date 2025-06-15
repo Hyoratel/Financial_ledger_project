@@ -1,3 +1,11 @@
+<!--
+  TransactionItem.vue
+
+  - 단일 거래 내역 항목 표시 (날짜, 카테고리, 금액)
+  - 오른쪽에 수정/삭제 버튼 제공 → edit/delete 이벤트 emit
+  - 거래 리스트(TransactionList) 컴포넌트에서 사용
+-->
+
 <template>
   <div class="transaction-item">
     <!-- 왼쪽: 날짜, 카테고리, 금액 표시 -->
@@ -20,7 +28,7 @@
 </template>
 
 <script setup>
-// 상위 컴포넌트로부터 거래 데이터 전달
+// props 정의 (상위 컴포넌트로부터 거래 데이터 전달)
 const props = defineProps({
   transaction: {
     type: Object,
@@ -28,15 +36,15 @@ const props = defineProps({
   },
 });
 
-// 상위 컴포넌트로 이벤트 전달을 위한 emit 정의
+// emit 정의 (상위 컴포넌트로 이벤트 전달)
 const emit = defineEmits(['edit', 'delete']);
 
-// 수정 버튼 클릭 시 상위에 거래 객체 전달
+// 수정 버튼 클릭 시 거래 객체 emit
 function handleEdit() {
   emit('edit', props.transaction);
 }
 
-// 삭제 버튼 클릭 시 상위에 거래 ID 전달
+// 삭제 버튼 클릭 시 거래 ID emit
 function handleDelete() {
   emit('delete', props.transaction.id);
 }
